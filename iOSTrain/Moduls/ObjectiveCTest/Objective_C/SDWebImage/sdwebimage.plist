@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>controller</key>
+			<string>BYSDWebImageTestViewController</string>
+			<key>name</key>
+			<string>基本用法</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>controller</key>
+			<string>BYNSThreadTestViewController</string>
+			<key>name</key>
+			<string>源码解析</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>controller</key>
+			<string>BYNSThreadTestViewController</string>
+			<key>name</key>
+			<string>自定义图片加载框架</string>
+		</dict>
+	</array>
+</array>
+</plist>

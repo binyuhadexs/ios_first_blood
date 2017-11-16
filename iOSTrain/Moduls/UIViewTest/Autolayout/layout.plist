@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+        <dict>
+            <key>name</key>
+            <string>View:frame|bounds|center理解</string>
+            <key>controller</key>
+            <string>BYViewTest1ViewController</string>
+        </dict>
+		<dict>
+			<key>controller</key>
+			<string>BYAutoresizingTestViewController</string>
+			<key>name</key>
+			<string>Autoresizing</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>controller</key>
+			<string>BYAutolayouXibTestViewController</string>
+			<key>name</key>
+			<string>Autolayout----- use trait variations</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Autolayout----- 测试</string>
+			<key>controller</key>
+			<string>BYAutolayout1ViewController</string>
+		</dict>
+        <dict>
+            <key>name</key>
+            <string>Autolayout----- 测试2</string>
+            <key>controller</key>
+            <string>BYAutolayout2ViewController</string>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Autolayout----- 测试3</string>
+            <key>controller</key>
+            <string>BYAutolayout3ViewController</string>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Autolayout----- 测试4</string>
+            <key>controller</key>
+            <string>BYAutolayout4ViewController</string>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Autolayout----- 测试5</string>
+            <key>controller</key>
+            <string>BYAutolayout5ViewController</string>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Autolayout----- 测试6</string>
+            <key>controller</key>
+            <string>BYAutolayout6ViewController</string>
+        </dict>
+	</array>
+	<array>
+		<dict>
+			<key>controller</key>
+			<string>BYMasonryTestViewController</string>
+			<key>name</key>
+			<string>Massonry</string>
+		</dict>
+        <dict>
+            <key>controller</key>
+            <string>BYMasonryTest2ViewController</string>
+            <key>name</key>
+            <string>Massonry--APi</string>
+        </dict>
+	</array>
+</array>
+</plist>

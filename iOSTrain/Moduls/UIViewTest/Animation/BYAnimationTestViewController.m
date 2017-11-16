@@ -1,0 +1,27 @@
+//
+//  BYAnimationTestViewController.m
+//  iOSTrain
+//
+//  Created by binyu on 2017/8/27.
+//  Copyright © 2017年 binyu. All rights reserved.
+//
+
+#import "BYAnimationTestViewController.h"
+
+@interface BYAnimationTestViewController ()
+@end
+
+@implementation BYAnimationTestViewController
+
+
+- (void)loadTableList{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"AnimationTest" ofType:@"plist"];
+    self.datas = [[NSArray alloc] initWithContentsOfFile:path];
+}
+
+- (void)by_viewDidLoad{
+    self.title = @"动画";
+}
+
+
+@end

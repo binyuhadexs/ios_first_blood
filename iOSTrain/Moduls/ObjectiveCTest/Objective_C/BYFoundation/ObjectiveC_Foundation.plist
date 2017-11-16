@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>controller</key>
+			<string>BYNSStringTestViewController</string>
+			<key>name</key>
+			<string>NSString</string>
+		</dict>
+	</array>
+    <array>
+        <dict>
+            <key>controller</key>
+            <string>BYWebViewController</string>
+            <key>name</key>
+            <string>NSPredicate</string>
+            <key>url</key>
+            <string>http://www.cocoachina.com/industry/20140321/8024.html</string>
+        </dict>
+    </array>
+    <array>
+        <dict>
+            <key>controller</key>
+            <string>BYRunloopTestViewController</string>
+            <key>name</key>
+            <string>NSRunloop/CFRunLoop</string>
+        </dict>
+    </array>
+	<array>
+		<dict>
+			<key>controller</key>
+			<string>BYAnimationTestViewController</string>
+			<key>name</key>
+			<string>核心动画</string>
+		</dict>
+	</array>
+</array>
+</plist>

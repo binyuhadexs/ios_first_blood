@@ -1,0 +1,21 @@
+//
+//  train.pch
+//  iOSTrain
+//
+//  Created by binyu on 2017/10/4.
+//  Copyright © 2017年 binyu. All rights reserved.
+//
+
+#ifndef train_pch
+#define train_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* train_pch */
+
+/*
+ 能被项目中的其他文件共享和访问
+ 
+
+*/
