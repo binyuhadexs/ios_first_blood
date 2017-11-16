@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <array>
+            <dict>
+                <key>controller</key>
+                <string>BYPthreadTestViewController</string>
+                <key>name</key>
+                <string>设计模式</string>
+            </dict>
+            <dict>
+                <key>controller</key>
+                <string>BYPthreadTestViewController</string>
+                <key>name</key>
+                <string></string>
+            </dict>
+        </array>
+        <array>
+            <dict>
+                <key>controller</key>
+                <string>BYNSThreadTestViewController</string>
+                <key>name</key>
+                <string>MVC</string>
+            </dict>
+            <dict>
+                <key>controller</key>
+                <string>BYNSThreadTestViewController</string>
+                <key>name</key>
+                <string>MVVM</string>
+            </dict>
+            <dict>
+                <key>controller</key>
+                <string>BYNSThreadTestViewController</string>
+                <key>name</key>
+                <string>MVP</string>
+            </dict>
+        </array>
+    </array>
+</plist>
+
+

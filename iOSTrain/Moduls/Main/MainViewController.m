@@ -11,6 +11,7 @@
 #import "BYUIViewTestViewController.h"
 #import "BYUINavigationController.h"
 #import "BYUITabBarController.h"
+#import "BYPaternPracticeViewController.h"
 
 @interface MainViewController ()
 
@@ -47,14 +48,18 @@
     
     //第二个
     BYUIViewTestViewController *secondController = [[BYUIViewTestViewController alloc] init];
-BYUINavigationController *secondNavigationController = [[BYUINavigationController alloc] initWithRootViewController:secondController];
+    BYUINavigationController *secondNavigationController = [[BYUINavigationController alloc] initWithRootViewController:secondController];
     UITabBarItem *tabbarItemSecond =  [[UITabBarItem alloc] initWithTitle:@"UI控件" image:[UIImage imageNamed:@"tabbar_router_focus"] tag:1];
     secondNavigationController.tabBarItem = tabbarItemSecond;
 
     
+    //第三个
+    BYPaternPracticeViewController *threeController = [[BYPaternPracticeViewController alloc] init];
+    BYUINavigationController *threeNavigationController = [[BYUINavigationController alloc] initWithRootViewController:threeController];
+    UITabBarItem *tabbarItemThree =  [[UITabBarItem alloc] initWithTitle:@"设计模式" image:[UIImage imageNamed:@"tabbar_router_focus"] tag:2];
+    threeNavigationController.tabBarItem = tabbarItemThree;
     
-    
-    NSArray *controllersArray = @[secondNavigationController,firstNavigationController];
+    NSArray *controllersArray = @[secondNavigationController,firstNavigationController,threeNavigationController];
     [self.tabBarController setViewControllers:controllersArray];
     [self addChildViewController:self.tabBarController];
     [self.view addSubview:self.tabBarController.view];

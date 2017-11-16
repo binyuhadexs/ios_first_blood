@@ -6,8 +6,8 @@
 //  Copyright © 2017年 binyu. All rights reserved.
 //
 
-#import "BYViewController.h"
+#import "BYTableViewViewController.h"
 
-@interface BYUIViewTestViewController : BYViewController
+@interface BYUIViewTestViewController : BYTableViewViewController
 
 @end

@@ -111,9 +111,21 @@
 
 
 - (void)loadTableList{
+    NSString *source = [self by_fileNamePlistSource];
+    if (source) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:source ofType:@"plist"];
+        self.datas = [[NSArray alloc] initWithContentsOfFile:path];
+        return;
+    }
+    
     NSString *path = [[NSBundle mainBundle] pathForResource:@"UIItem" ofType:@"plist"];
     self.datas = [[NSArray alloc] initWithContentsOfFile:path];
 }
+
+- (NSString *)by_fileNamePlistSource{
+    return nil;
+}
+
 
 - (void)by_viewDidLoad{
     

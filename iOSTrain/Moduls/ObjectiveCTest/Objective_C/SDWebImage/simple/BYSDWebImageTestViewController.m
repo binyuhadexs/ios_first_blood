@@ -7,8 +7,12 @@
 //
 
 #import "BYSDWebImageTestViewController.h"
+#import "UIImageView+WebCache.h"
+#import "UIImage+GIF.h"
 
 @interface BYSDWebImageTestViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)loadImage:(id)sender;
 
 @end
 
@@ -16,22 +20,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (IBAction)loadImage:(id)sender {
+    [self demo2];
+
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)demo2{
+    /*
+     核心方法 [UIImage animatedImageWithImages:images duration:duration];
+     */
+    
+    self.imageView.image = [UIImage sd_animatedGIFNamed:@"sb"];
 }
-*/
+
+- (void)demo1{
+    NSString *imgAddr = @"http://attach.bbs.miui.com/forum/201502/04/172701miz0kccvu4gu0vi4.jpg";
+    [self.imageView sd_setImageWithURL:imgAddr placeholderImage:[UIImage imageNamed:@"tabbar_router_focus"] options:SDWebImageLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        NSLog(@"receivedSize: %tu expectedSize: %tu  per %ld",receivedSize,expectedSize,receivedSize*100/expectedSize);
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        NSLog(@"FINISH");
+    }];
+}
 
 @end

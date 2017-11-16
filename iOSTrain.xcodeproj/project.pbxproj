@@ -63,6 +63,11 @@
 		5C5789751FBDE45800314D23 /* BYSDWebImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5789311FBDDEE200314D23 /* BYSDWebImageViewController.m */; };
 		5C5789791FBDE65200314D23 /* BYSDWebImageTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5789771FBDE65200314D23 /* BYSDWebImageTestViewController.m */; };
 		5C57897A1FBDE65200314D23 /* BYSDWebImageTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5789781FBDE65200314D23 /* BYSDWebImageTestViewController.xib */; };
+		5C5789BB1FBDE8E500314D23 /* BYPaternPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5789BA1FBDE8E500314D23 /* BYPaternPracticeViewController.m */; };
+		5C5789BD1FBDE90A00314D23 /* DesignPaterns.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C5789BC1FBDE90A00314D23 /* DesignPaterns.plist */; };
+		5C5789C21FBDECB600314D23 /* UIItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C5789BE1FBDECB600314D23 /* UIItem.plist */; };
+		5C5789C41FBDECB600314D23 /* BYUIViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5789C11FBDECB600314D23 /* BYUIViewTestViewController.m */; };
+		5C5789C61FBDF09E00314D23 /* sb.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5C5789C51FBDF09E00314D23 /* sb.gif */; };
 		5C6C825E1FB4306800FA8171 /* BYLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C825D1FB4306800FA8171 /* BYLayoutViewController.m */; };
 		5C6C82601FB4319000FA8171 /* layout.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C6C825F1FB4319000FA8171 /* layout.plist */; };
 		5C6C82651FB4332600FA8171 /* BYAutoresizingTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C82631FB4332600FA8171 /* BYAutoresizingTestViewController.m */; };
@@ -123,11 +128,6 @@
 		5CCD9D001F4B0B51009D7540 /* BYUINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCD9CFF1F4B0B51009D7540 /* BYUINavigationController.m */; };
 		5CCD9D081F4B10CE009D7540 /* BYButtonTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCD9D061F4B10CE009D7540 /* BYButtonTestViewController.m */; };
 		5CCD9D091F4B10CE009D7540 /* BYButtonTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CCD9D071F4B10CE009D7540 /* BYButtonTestViewController.xib */; };
-		5CCD9D0F1F4B1121009D7540 /* BYUIViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCD9D0C1F4B1121009D7540 /* BYUIViewTestViewController.m */; };
-		5CCD9D101F4B1121009D7540 /* BYUIViewTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CCD9D0D1F4B1121009D7540 /* BYUIViewTestViewController.xib */; };
-		5CCD9D111F4B1121009D7540 /* UIItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CCD9D0E1F4B1121009D7540 /* UIItem.plist */; };
-		5CCD9D161F4B22B3009D7540 /* UIViewTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCD9D141F4B22B3009D7540 /* UIViewTestCell.m */; };
-		5CCD9D171F4B22B3009D7540 /* UIViewTestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CCD9D151F4B22B3009D7540 /* UIViewTestCell.xib */; };
 		5CCD9D1C1F4B342C009D7540 /* BYObjectCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCD9D1A1F4B342C009D7540 /* BYObjectCViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -245,6 +245,13 @@
 		5C5789761FBDE65200314D23 /* BYSDWebImageTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYSDWebImageTestViewController.h; sourceTree = "<group>"; };
 		5C5789771FBDE65200314D23 /* BYSDWebImageTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYSDWebImageTestViewController.m; sourceTree = "<group>"; };
 		5C5789781FBDE65200314D23 /* BYSDWebImageTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BYSDWebImageTestViewController.xib; sourceTree = "<group>"; };
+		5C5789B91FBDE8E500314D23 /* BYPaternPracticeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYPaternPracticeViewController.h; sourceTree = "<group>"; };
+		5C5789BA1FBDE8E500314D23 /* BYPaternPracticeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYPaternPracticeViewController.m; sourceTree = "<group>"; };
+		5C5789BC1FBDE90A00314D23 /* DesignPaterns.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DesignPaterns.plist; sourceTree = "<group>"; };
+		5C5789BE1FBDECB600314D23 /* UIItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UIItem.plist; sourceTree = "<group>"; };
+		5C5789BF1FBDECB600314D23 /* BYUIViewTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYUIViewTestViewController.h; sourceTree = "<group>"; };
+		5C5789C11FBDECB600314D23 /* BYUIViewTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYUIViewTestViewController.m; sourceTree = "<group>"; };
+		5C5789C51FBDF09E00314D23 /* sb.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sb.gif; sourceTree = "<group>"; };
 		5C6C825C1FB4306800FA8171 /* BYLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYLayoutViewController.h; sourceTree = "<group>"; };
 		5C6C825D1FB4306800FA8171 /* BYLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYLayoutViewController.m; sourceTree = "<group>"; };
 		5C6C825F1FB4319000FA8171 /* layout.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = layout.plist; sourceTree = "<group>"; };
@@ -351,13 +358,6 @@
 		5CCD9D051F4B10CE009D7540 /* BYButtonTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYButtonTestViewController.h; sourceTree = "<group>"; };
 		5CCD9D061F4B10CE009D7540 /* BYButtonTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYButtonTestViewController.m; sourceTree = "<group>"; };
 		5CCD9D071F4B10CE009D7540 /* BYButtonTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYButtonTestViewController.xib; sourceTree = "<group>"; };
-		5CCD9D0B1F4B1121009D7540 /* BYUIViewTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYUIViewTestViewController.h; sourceTree = "<group>"; };
-		5CCD9D0C1F4B1121009D7540 /* BYUIViewTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYUIViewTestViewController.m; sourceTree = "<group>"; };
-		5CCD9D0D1F4B1121009D7540 /* BYUIViewTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYUIViewTestViewController.xib; sourceTree = "<group>"; };
-		5CCD9D0E1F4B1121009D7540 /* UIItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UIItem.plist; sourceTree = "<group>"; };
-		5CCD9D131F4B22B3009D7540 /* UIViewTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewTestCell.h; sourceTree = "<group>"; };
-		5CCD9D141F4B22B3009D7540 /* UIViewTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewTestCell.m; sourceTree = "<group>"; };
-		5CCD9D151F4B22B3009D7540 /* UIViewTestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIViewTestCell.xib; sourceTree = "<group>"; };
 		5CCD9D191F4B342C009D7540 /* BYObjectCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYObjectCViewController.h; sourceTree = "<group>"; };
 		5CCD9D1A1F4B342C009D7540 /* BYObjectCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYObjectCViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -481,6 +481,8 @@
 		5C3C438D1F8475FD00D66D80 /* UIViewTraining */ = {
 			isa = PBXGroup;
 			children = (
+				5CCD9D041F4B10B1009D7540 /* Button */,
+				5CC965B11FA42A1E00F91B10 /* WebView */,
 				5C3C43941F85BB5F00D66D80 /* UILabel */,
 				5C3C438E1F84765A00D66D80 /* BYUIViewTrainingViewController.h */,
 				5C3C438F1F84765A00D66D80 /* BYUIViewTrainingViewController.m */,
@@ -601,6 +603,16 @@
 			path = DataCache;
 			sourceTree = "<group>";
 		};
+		5C5789B81FBDE82200314D23 /* Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				5C5789B91FBDE8E500314D23 /* BYPaternPracticeViewController.h */,
+				5C5789BA1FBDE8E500314D23 /* BYPaternPracticeViewController.m */,
+				5C5789BC1FBDE90A00314D23 /* DesignPaterns.plist */,
+			);
+			path = Pattern;
+			sourceTree = "<group>";
+		};
 		5C6C82581FB42E2500FA8171 /* Autolayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -670,6 +682,7 @@
 		5C6C82AF1FB5CA9000FA8171 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				5C5789C51FBDF09E00314D23 /* sb.gif */,
 				5C57893D1FBDDFEF00314D23 /* SDWebImage */,
 				5C6C82B01FB5CA9000FA8171 /* Masonry */,
 			);
@@ -859,6 +872,7 @@
 				5CCD9CE21F4B0236009D7540 /* Main */,
 				5CCD9D181F4B342C009D7540 /* ObjectiveCTest */,
 				5CCD9D031F4B106A009D7540 /* UIViewTest */,
+				5C5789B81FBDE82200314D23 /* Pattern */,
 			);
 			path = Moduls;
 			sourceTree = "<group>";
@@ -866,7 +880,6 @@
 		5CCD9CE21F4B0236009D7540 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5CCD9D0A1F4B1121009D7540 /* UIViewTest */,
 				5CCD9CE31F4B02B3009D7540 /* MainViewController.h */,
 				5CCD9CE41F4B02B3009D7540 /* MainViewController.m */,
 			);
@@ -896,8 +909,9 @@
 				5C6C82581FB42E2500FA8171 /* Autolayout */,
 				5C3C438D1F8475FD00D66D80 /* UIViewTraining */,
 				5CCD9D231F4B403C009D7540 /* Animation */,
-				5CCD9D041F4B10B1009D7540 /* Button */,
-				5CC965B11FA42A1E00F91B10 /* WebView */,
+				5C5789BF1FBDECB600314D23 /* BYUIViewTestViewController.h */,
+				5C5789C11FBDECB600314D23 /* BYUIViewTestViewController.m */,
+				5C5789BE1FBDECB600314D23 /* UIItem.plist */,
 			);
 			path = UIViewTest;
 			sourceTree = "<group>";
@@ -910,28 +924,6 @@
 				5CCD9D071F4B10CE009D7540 /* BYButtonTestViewController.xib */,
 			);
 			path = Button;
-			sourceTree = "<group>";
-		};
-		5CCD9D0A1F4B1121009D7540 /* UIViewTest */ = {
-			isa = PBXGroup;
-			children = (
-				5CCD9D121F4B1277009D7540 /* Cells */,
-				5CCD9D0B1F4B1121009D7540 /* BYUIViewTestViewController.h */,
-				5CCD9D0C1F4B1121009D7540 /* BYUIViewTestViewController.m */,
-				5CCD9D0D1F4B1121009D7540 /* BYUIViewTestViewController.xib */,
-				5CCD9D0E1F4B1121009D7540 /* UIItem.plist */,
-			);
-			path = UIViewTest;
-			sourceTree = "<group>";
-		};
-		5CCD9D121F4B1277009D7540 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				5CCD9D131F4B22B3009D7540 /* UIViewTestCell.h */,
-				5CCD9D141F4B22B3009D7540 /* UIViewTestCell.m */,
-				5CCD9D151F4B22B3009D7540 /* UIViewTestCell.xib */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		5CCD9D181F4B342C009D7540 /* ObjectiveCTest */ = {
@@ -1071,16 +1063,17 @@
 				5C20964C1FBB226900238FDC /* BYNSOperationDefineTestViewController.xib in Resources */,
 				5C3650A41FB8718A00A80AEC /* thread_mode.plist in Resources */,
 				5C6C827A1FB5673000FA8171 /* BYAutolayout3ViewController.xib in Resources */,
-				5CCD9D101F4B1121009D7540 /* BYUIViewTestViewController.xib in Resources */,
 				5C5789741FBDE37500314D23 /* data_cache.plist in Resources */,
 				5CCD9CBD1F4B01D4009D7540 /* LaunchScreen.storyboard in Resources */,
 				5C0008DC1FBA0E6500E8AB69 /* BYNSOperationTestViewController.xib in Resources */,
+				5C5789C61FBDF09E00314D23 /* sb.gif in Resources */,
 				5CC965C61FA4393500F91B10 /* BYNSStringTestViewController.xib in Resources */,
 				5C3650851FB7E49200A80AEC /* BYMasonryTest2ViewController.xib in Resources */,
 				5C6C82661FB4332600FA8171 /* BYAutoresizingTestViewController.xib in Resources */,
 				5C6C82D81FB5CA9000FA8171 /* README.md in Resources */,
 				5C36509E1FB8382C00A80AEC /* BYRunloopTestViewController.xib in Resources */,
 				5CCD9CBA1F4B01D4009D7540 /* Assets.xcassets in Resources */,
+				5C5789C21FBDECB600314D23 /* UIItem.plist in Resources */,
 				5C0D8BC91F52C98900F7864A /* AnimationTest.plist in Resources */,
 				5C5789371FBDDF3200314D23 /* sdwebimage.plist in Resources */,
 				5C6C82851FB5C72D00FA8171 /* BYMasonryTestViewController.xib in Resources */,
@@ -1089,7 +1082,6 @@
 				5C3650AA1FB871C300A80AEC /* BYPthreadTestViewController.xib in Resources */,
 				5CC965D11FA43E9000F91B10 /* ObjectiveC_Question.plist in Resources */,
 				5CCD9CB51F4B01D4009D7540 /* Main.storyboard in Resources */,
-				5CCD9D171F4B22B3009D7540 /* UIViewTestCell.xib in Resources */,
 				5C57897A1FBDE65200314D23 /* BYSDWebImageTestViewController.xib in Resources */,
 				5C57892E1FBDDB8900314D23 /* network.plist in Resources */,
 				5C6C82E01FB5FF9D00FA8171 /* BYAutolayout6ViewController.xib in Resources */,
@@ -1099,10 +1091,10 @@
 				5CC965AE1FA4268A00F91B10 /* ObjectiveC.plist in Resources */,
 				5C6C827F1FB570CB00FA8171 /* BYAutolayout4ViewController.xib in Resources */,
 				5C6C82751FB554DE00FA8171 /* BYAutolayout2ViewController.xib in Resources */,
+				5C5789BD1FBDE90A00314D23 /* DesignPaterns.plist in Resources */,
 				5C3650B01FB8757D00A80AEC /* BYNSThreadTestViewController.xib in Resources */,
 				5C6C82E51FB6941F00FA8171 /* BYViewTest1ViewController.xib in Resources */,
 				5CCD9D091F4B10CE009D7540 /* BYButtonTestViewController.xib in Resources */,
-				5CCD9D111F4B1121009D7540 /* UIItem.plist in Resources */,
 				5C0008D01FB9BD3700E8AB69 /* BYGCDTestViewController.xib in Resources */,
 				5C6C82601FB4319000FA8171 /* layout.plist in Resources */,
 			);
@@ -1145,7 +1137,6 @@
 				5C3650A91FB871C300A80AEC /* BYPthreadTestViewController.m in Sources */,
 				5CCD9D001F4B0B51009D7540 /* BYUINavigationController.m in Sources */,
 				5C5789231FBDDA7700314D23 /* Reachability.m in Sources */,
-				5CCD9D0F1F4B1121009D7540 /* BYUIViewTestViewController.m in Sources */,
 				5C0008D41FB9E97300E8AB69 /* BYGCDTest1ViewController.m in Sources */,
 				5C57896A1FBDDFEF00314D23 /* UIImage+MultiFormat.m in Sources */,
 				5C57896C1FBDDFEF00314D23 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -1164,6 +1155,7 @@
 				5CC965C51FA4393500F91B10 /* BYNSStringTestViewController.m in Sources */,
 				5C6C82D11FB5CA9000FA8171 /* MASLayoutConstraint.m in Sources */,
 				5C6C82CE1FB5CA9000FA8171 /* MASCompositeConstraint.m in Sources */,
+				5C5789BB1FBDE8E500314D23 /* BYPaternPracticeViewController.m in Sources */,
 				5C6C82D31FB5CA9000FA8171 /* MASViewConstraint.m in Sources */,
 				5C6C82741FB554DE00FA8171 /* BYAutolayout2ViewController.m in Sources */,
 				5C5789271FBDDAF400314D23 /* BYNetMonitorViewController.m in Sources */,
@@ -1172,7 +1164,6 @@
 				5C6C82CF1FB5CA9000FA8171 /* MASConstraint.m in Sources */,
 				5CCD9CB21F4B01D4009D7540 /* ViewController.m in Sources */,
 				5C6C82791FB5673000FA8171 /* BYAutolayout3ViewController.m in Sources */,
-				5CCD9D161F4B22B3009D7540 /* UIViewTestCell.m in Sources */,
 				5C6C826A1FB45DD700FA8171 /* BYAutolayouXibTestViewController.m in Sources */,
 				5C6C82DF1FB5FF9D00FA8171 /* BYAutolayout6ViewController.m in Sources */,
 				5CCD9CAF1F4B01D4009D7540 /* AppDelegate.m in Sources */,
@@ -1204,6 +1195,7 @@
 				5C0008CF1FB9BD3700E8AB69 /* BYGCDTestViewController.m in Sources */,
 				5C0D8BC61F52C92E00F7864A /* BYAnimationTestViewController.m in Sources */,
 				5CC965B41FA42A4200F91B10 /* BYWebViewController.m in Sources */,
+				5C5789C41FBDECB600314D23 /* BYUIViewTestViewController.m in Sources */,
 				5C6C82D01FB5CA9000FA8171 /* MASConstraintMaker.m in Sources */,
 				5C6C826F1FB4AB3F00FA8171 /* BYAutolayout1ViewController.m in Sources */,
 				5C3C43901F84765A00D66D80 /* BYUIViewTrainingViewController.m in Sources */,
