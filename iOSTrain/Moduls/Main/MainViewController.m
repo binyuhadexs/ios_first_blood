@@ -12,6 +12,7 @@
 #import "BYUINavigationController.h"
 #import "BYUITabBarController.h"
 #import "BYPaternPracticeViewController.h"
+#import "BYFrameworkViewController.h"
 
 @interface MainViewController ()
 
@@ -59,11 +60,20 @@
     UITabBarItem *tabbarItemThree =  [[UITabBarItem alloc] initWithTitle:@"设计模式" image:[UIImage imageNamed:@"tabbar_router_focus"] tag:2];
     threeNavigationController.tabBarItem = tabbarItemThree;
     
-    NSArray *controllersArray = @[secondNavigationController,firstNavigationController,threeNavigationController];
+    //第4个
+    BYFrameworkViewController *fourController = [[BYFrameworkViewController alloc] init];
+    BYUINavigationController *fourNavigationController = [[BYUINavigationController alloc] initWithRootViewController:fourController];
+    UITabBarItem *tabbarItemFour =  [[UITabBarItem alloc] initWithTitle:@"框架" image:[UIImage imageNamed:@"tabbar_router_focus"] tag:3];
+    fourNavigationController.tabBarItem = tabbarItemFour;
+    
+    NSArray *controllersArray = @[secondNavigationController,firstNavigationController,threeNavigationController,fourNavigationController];
     [self.tabBarController setViewControllers:controllersArray];
     [self addChildViewController:self.tabBarController];
     [self.view addSubview:self.tabBarController.view];
     [self.tabBarController didMoveToParentViewController:self]; //???????
+    
+    
+    
 }
 
 
@@ -76,7 +86,14 @@
 }
 
 
-
+/*
+ LOG技巧
+ 对象
+ -(NSString *)description
+ 数据类型
+ -(NSString *)descriptionWithLocale:(id)locale;
+ - (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level;
+ */
 
 
 

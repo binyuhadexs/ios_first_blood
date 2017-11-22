@@ -13,6 +13,21 @@
 
 @implementation BYAnimationTestViewController
 
+/*
+     https://zsisme.gitbooks.io/ios-/content/chapter1/the-layer-tree.html
+ */
+
+/*
+ 
+ UIView和CALayer两个平行层级 ？？ -- 职责分离 iOS 和Mac OS代码共享
+ 
+ 视图层级
+ 图层树
+ 呈现树
+ 渲染树
+ 
+ */
+
 
 - (void)loadTableList{
     NSString *path = [[NSBundle mainBundle] pathForResource:@"AnimationTest" ofType:@"plist"];

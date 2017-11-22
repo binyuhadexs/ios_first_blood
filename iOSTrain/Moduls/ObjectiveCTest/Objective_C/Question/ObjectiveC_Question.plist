@@ -31,6 +31,14 @@
             <key>url</key>
             <string>http://blog.csdn.net/xdrt81y/article/details/8981133</string>
         </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYWebViewController</string>
+            <key>name</key>
+            <string>给nil发送消息程序不会崩溃？</string>
+            <key>url</key>
+            <string>http://blog.csdn.net/jeffasd/article/details/51615151</string>
+        </dict>
     </array>
 	<array>
 		<dict>

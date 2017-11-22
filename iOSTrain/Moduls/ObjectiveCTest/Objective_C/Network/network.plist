@@ -1,52 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>controller</key>
+			<string>BYRequestViewController</string>
+			<key>name</key>
+			<string>网络请求</string>
+		</dict>
+        <dict>
+            <key>controller</key>
+            <string>BYSessionTestViewController</string>
+            <key>name</key>
+            <string>NSURLSession</string>
+        </dict>
+        
+	</array>
+	<array>
+		<dict>
+			<key>controller</key>
+			<string>BYNetMonitorViewController</string>
+			<key>name</key>
+			<string>监听网络状态</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>controller</key>
+			<string>BYPingViewController</string>
+			<key>name</key>
+			<string>Ping</string>
+		</dict>
+		<dict>
+			<key>controller</key>
+			<string>BYTestSimplePingViewController</string>
+			<key>name</key>
+			<string>Ping</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>controller</key>
+			<string>BYSocketTestViewController</string>
+			<key>name</key>
+			<string>Socket</string>
+		</dict>
+	</array>
     <array>
-        <array>
-            <dict>
-                <key>controller</key>
-                <string>BYPthreadTestViewController</string>
-                <key>name</key>
-                <string>网络请求</string>
-            </dict>
-        </array>
-        <array>
-            <dict>
-                <key>controller</key>
-                <string>BYNSThreadTestViewController</string>
-                <key>name</key>
-                <string>监听网络状态</string>
-            </dict>
-        </array>
-        <array>
-            <dict>
-                <key>controller</key>
-                <string>BYGCDTestViewController</string>
-                <key>name</key>
-                <string>GCD框架</string>
-            </dict>
-            <dict>
-                <key>controller</key>
-                <string>BYGCDTest1ViewController</string>
-                <key>name</key>
-                <string>GCD--常用方法</string>
-            </dict>
-        </array>
-        <array>
-            <dict>
-                <key>controller</key>
-                <string>BYNSOperationTestViewController</string>
-                <key>name</key>
-                <string>NSOperation</string>
-            </dict>
-            <dict>
-                <key>controller</key>
-                <string>BYNSOperationDefineTestViewController</string>
-                <key>name</key>
-                <string>NSOperation自定义</string>
-            </dict>
-        </array>
+        <dict>
+            <key>controller</key>
+            <string>BYSocketTestViewController</string>
+            <key>name</key>
+            <string>AFN简单使用</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYSocketTestViewController</string>
+            <key>name</key>
+            <string>AFN源码分享</string>
+        </dict>
     </array>
+</array>
 </plist>
-
-

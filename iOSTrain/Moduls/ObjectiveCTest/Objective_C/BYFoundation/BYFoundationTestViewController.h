@@ -7,6 +7,16 @@
 //
 
 #import "BYTableViewViewController.h"
+@protocol TestProtocol<NSObject>
+
+@required
+
+
+- (void)test;
+
+@optional
+
+@end
 
 @interface BYFoundationTestViewController : BYTableViewViewController
 

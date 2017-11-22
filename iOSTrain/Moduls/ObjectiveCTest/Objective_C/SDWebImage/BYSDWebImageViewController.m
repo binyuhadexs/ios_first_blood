@@ -8,9 +8,17 @@
 
 #import "BYSDWebImageViewController.h"
 
+/*
+ 内存缓存 NSCache
+ 磁盘缓存 文件存储
+ 
+ */
+
 @interface BYSDWebImageViewController ()
 
 @end
+
+
 
 @implementation BYSDWebImageViewController
 

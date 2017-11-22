@@ -3,19 +3,99 @@
 <plist version="1.0">
 <array>
 	<array>
-		<dict>
-			<key>controller</key>
-			<string>BYNSStringTestViewController</string>
-			<key>name</key>
-			<string>NSString</string>
-		</dict>
+        <dict>
+            <key>controller</key>
+            <string>BYBlockTestViewController</string>
+            <key>name</key>
+            <string>Block闭包??</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYArchiverTestViewController</string>
+            <key>name</key>
+            <string>对象归档</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYNSStringTestViewController</string>
+            <key>name</key>
+            <string>文件操作</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYCopyTestViewController</string>
+            <key>name</key>
+            <string>复制（深浅拷贝）</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYMemoryTestViewController</string>
+            <key>name</key>
+            <string>内存管理</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYNSStringTestViewController</string>
+            <key>name</key>
+            <string>KVO</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYNSStringTestViewController</string>
+            <key>name</key>
+            <string>KVC</string>
+        </dict>
 	</array>
+    <array>
+        <dict>
+            <key>controller</key>
+            <string>BYNSStringTestViewController</string>
+            <key>name</key>
+            <string>NSString/NSMutableString</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYNSStringTestViewController</string>
+            <key>name</key>
+            <string>NSArray/NSMutableArray</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYNSStringTestViewController</string>
+            <key>name</key>
+            <string>NSDictionary/NSMutableDictionary</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYNSStringTestViewController</string>
+            <key>name</key>
+            <string>NSData</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYNSStringTestViewController</string>
+            <key>name</key>
+            <string>NSSet/NSMutableSet</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYNSStringTestViewController</string>
+            <key>name</key>
+            <string>NSPoint/NSRange/NSSize/NSRect</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYNSStringTestViewController</string>
+            <key>name</key>
+            <string>NSNumber/NSValue/NSNull</string>
+        </dict>
+    </array>
     <array>
         <dict>
             <key>controller</key>
             <string>BYWebViewController</string>
             <key>name</key>
-            <string>NSPredicate</string>
+            <string>NSPredicate(谓词)</string>
             <key>url</key>
             <string>http://www.cocoachina.com/industry/20140321/8024.html</string>
         </dict>
@@ -31,9 +111,9 @@
 	<array>
 		<dict>
 			<key>controller</key>
-			<string>BYAnimationTestViewController</string>
+			<string>BYBlockTestViewController</string>
 			<key>name</key>
-			<string>核心动画</string>
+			<string>Block闭包</string>
 		</dict>
 	</array>
 </array>

@@ -12,6 +12,12 @@
         <array>
             <dict>
                 <key>controller</key>
+                <string>BYUIAnimationViewController</string>
+                <key>name</key>
+                <string>UIView动画</string>
+            </dict>
+            <dict>
+                <key>controller</key>
                 <string>BYTransformTestViewController</string>
                 <key>name</key>
                 <string>Transform</string>
@@ -20,7 +26,7 @@
         <array>
             <dict>
                 <key>controller</key>
-                <string>BYAnimationTestViewController</string>
+                <string>BYCoreAnimationTestViewController</string>
                 <key>name</key>
                 <string>核心动画</string>
             </dict>

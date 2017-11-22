@@ -111,18 +111,7 @@
  http://blog.csdn.net/kesalin/article/details/8194240
  */
 
-//对象归档 NSCoder
 
-//深拷贝 浅拷贝
-
-//文件操作
-
-//Foundation
-//blocks
-
-//设计模式
-//runtime
-//runloop
 
 
 

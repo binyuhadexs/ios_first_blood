@@ -25,6 +25,18 @@
 			<key>name</key>
 			<string>Foundation框架</string>
 		</dict>
+        <dict>
+            <key>controller</key>
+            <string>BYRuntimeTestViewController</string>
+            <key>name</key>
+            <string>Runtime</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYRunloopTestViewController</string>
+            <key>name</key>
+            <string>Runloop</string>
+        </dict>
 	</array>
 	<array>
 		<dict>

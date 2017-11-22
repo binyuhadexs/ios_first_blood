@@ -19,6 +19,14 @@
         <array>
             <dict>
                 <key>controller</key>
+                <string>BYSortViewController</string>
+                <key>name</key>
+                <string>排序算法</string>
+            </dict>
+        </array>
+        <array>
+            <dict>
+                <key>controller</key>
                 <string>BYNSThreadTestViewController</string>
                 <key>name</key>
                 <string>MVC</string>

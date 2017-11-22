@@ -6,8 +6,9 @@
 //  Copyright © 2017年 binyu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+//#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface BYObject : NSObject
+@interface BYObject : NSObject<NSCoding>
 
 @end

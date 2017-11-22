@@ -9,6 +9,12 @@
 			<key>name</key>
 			<string>UI基础</string>
 		</dict>
+        <dict>
+            <key>controller</key>
+            <string>BYLayoutViewController</string>
+            <key>name</key>
+            <string>自定义UI</string>
+        </dict>
 	</array>
     <array>
         <dict>
