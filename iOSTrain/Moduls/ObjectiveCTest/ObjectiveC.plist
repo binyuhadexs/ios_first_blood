@@ -37,6 +37,18 @@
             <key>name</key>
             <string>Runloop</string>
         </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYKVCTestViewController</string>
+            <key>name</key>
+            <string>KVC</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYRunloopTestViewController</string>
+            <key>name</key>
+            <string>KVO</string>
+        </dict>
 	</array>
 	<array>
 		<dict>

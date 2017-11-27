@@ -12,9 +12,21 @@
         <array>
             <dict>
                 <key>controller</key>
-                <string>BYLabelTestViewController</string>
+                <string>BYUIViewFoundationTestViewController</string>
                 <key>name</key>
-                <string>Label</string>
+                <string>基础控件</string>
+            </dict>
+            <dict>
+                <key>controller</key>
+                <string>BYUIViewFound2TestViewController</string>
+                <key>name</key>
+                <string>基础控件2</string>
+            </dict>
+            <dict>
+                <key>controller</key>
+                <string>BYUIViewFound3TestViewController</string>
+                <key>name</key>
+                <string>基础控件3</string>
             </dict>
         </array>
         <array>

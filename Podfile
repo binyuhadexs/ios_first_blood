@@ -2,6 +2,9 @@
 platform :ios, '8.0'
 
 pod 'AFNetworking'
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'ReactiveCocoa'
 
 target 'iOSTrain' do
     

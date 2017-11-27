@@ -6,8 +6,8 @@
 //  Copyright © 2017年 binyu. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface BYViewController : ViewController
+@interface BYViewController : UIViewController
 
 @end

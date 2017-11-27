@@ -18,9 +18,27 @@
             </dict>
             <dict>
                 <key>controller</key>
-                <string>BYTransformTestViewController</string>
+                <string>BYQuartsCoreTestViewController</string>
                 <key>name</key>
-                <string>Transform</string>
+                <string>QuartsCore</string>
+            </dict>
+            <dict>
+                <key>controller</key>
+                <string>BYQuartsCoreTest2ViewController</string>
+                <key>name</key>
+                <string>QuartsCore1</string>
+            </dict>
+            <dict>
+                <key>controller</key>
+                <string>BYQuartsCoreTest3ViewController</string>
+                <key>name</key>
+                <string>QuartsCore2</string>
+            </dict>
+            <dict>
+                <key>controller</key>
+                <string>BYCALayerTest1ViewController</string>
+                <key>name</key>
+                <string>CALayer</string>
             </dict>
         </array>
         <array>

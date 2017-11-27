@@ -15,6 +15,10 @@
 @property (nonatomic,strong) WKWebView *wkWebView;
 
 @end
+/*
+ http://www.imlifengfeng.com/blog/?p=528
+ 
+ */
 
 @implementation BYWebViewController
 
@@ -30,8 +34,7 @@
 - (void)loadURLRequest{
     NSURL *url = [NSURL URLWithString:self.wrapper.url];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-   WKNavigation *wkNav =   [self.wkWebView loadRequest:request];
-    
+     WKNavigation *wkNav =   [self.wkWebView loadRequest:request];
 
 }
 

@@ -11,10 +11,11 @@
 		</dict>
         <dict>
             <key>controller</key>
-            <string>BYLayoutViewController</string>
+            <string>BYUIViewDefindViewController</string>
             <key>name</key>
             <string>自定义UI</string>
         </dict>
+
 	</array>
     <array>
         <dict>

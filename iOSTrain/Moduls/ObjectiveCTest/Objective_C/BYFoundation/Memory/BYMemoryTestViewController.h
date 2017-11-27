@@ -15,6 +15,8 @@
  2读写 readonly,readwrite 默认readwrite
  3设置方法名 getter,setter=<#method#>
  4内存管理
+ 
+ 
      assign
      retain
      copy
@@ -25,6 +27,13 @@
  
  */
 
-@property(null_resettable) ;
+/*
+ __strong
+ __weak
+ 
+ 
+ */
+
+//@property(null_resettable) ;
 
 @end

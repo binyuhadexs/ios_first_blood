@@ -10,6 +10,10 @@
 
 @implementation BYUIViewTestViewController
 
+/*
+ Navigationbar bug
+ http://www.jianshu.com/p/e4448c24d900
+ */
 
 - (NSString *)by_fileNamePlistSource{
     return @"UIItem";

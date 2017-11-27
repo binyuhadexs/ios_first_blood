@@ -12,6 +12,15 @@
 
 @end
 
+/*
+ SB和XIB的前世今生
+ https://www.cnblogs.com/zouhengwei/p/5466994.html
+ */
+/*
+ 触摸事件
+ http://www.imlifengfeng.com/blog/?p=598
+ */
+
 @implementation BYUIViewTrainingViewController
 
 - (void)loadTableList{
@@ -20,7 +29,7 @@
 }
 
 - (void)by_viewDidLoad{
-    self.title = @"动画";
+    self.title = @"控件基本使用";
 }
 
 @end
