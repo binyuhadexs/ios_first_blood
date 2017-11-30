@@ -5,6 +5,7 @@ pod 'AFNetworking'
 pod 'MJExtension'
 pod 'MJRefresh'
 pod 'ReactiveCocoa'
+pod 'AsyncDisplayKit'
 
 target 'iOSTrain' do
     

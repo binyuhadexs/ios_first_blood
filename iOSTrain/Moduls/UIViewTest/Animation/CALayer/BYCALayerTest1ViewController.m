@@ -168,7 +168,7 @@ transform
 //    self.sublayer.contentsCenter =  CGRectMake(0.25, 0.25, 0.5, 0.5);
     self.sublayer.delegate = self;
     
-    self.sublayer.doubleSided
+//    self.sublayer.doubleSided
     
     [self.sublayer display]; //不会自动掉用delegate里的方法
     
@@ -250,6 +250,33 @@ transform
 
 - (void)layoutSublayersOfLayer:(CALayer *)layer{
     NSLog(@"%s",__func__);
+}
+
+- (void)CATransactionDeom{
+    //动画底层都是包装成一个事务.
+    //有很多操作绑定在一起, 当这些操作全部执行完毕时,它才进行下一步工作.
+    
+    [CATransaction begin];
+    //
+    //    //设置事务有没有动画
+    [CATransaction setDisableActions:YES];
+    //设置事务动画的执行时长.
+    [CATransaction setAnimationDuration:0];
+    
+    self.sublayer.bounds = CGRectMake(0, 0, arc4random_uniform(200), arc4random_uniform(200));
+    self.sublayer.position = CGPointMake(arc4random_uniform(300), arc4random_uniform(400));
+    self.sublayer.backgroundColor = [self randomColor].CGColor;
+    self.sublayer.cornerRadius = arc4random_uniform(50);
+    
+    [CATransaction commit];
+}
+
+
+- (UIColor *)randomColor{
+    CGFloat r = arc4random_uniform(256) /255.0;
+    CGFloat g = arc4random_uniform(256) /255.0;
+    CGFloat b = arc4random_uniform(256) /255.0;
+    return [UIColor colorWithRed:r green:g blue:b alpha:1];
 }
 
 //- (nullable id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event{

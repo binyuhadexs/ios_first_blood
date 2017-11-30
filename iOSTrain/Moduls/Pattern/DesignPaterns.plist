@@ -5,7 +5,7 @@
         <array>
             <dict>
                 <key>controller</key>
-                <string>BYPthreadTestViewController</string>
+                <string>BYDesignPatternViewController</string>
                 <key>name</key>
                 <string>设计模式</string>
             </dict>

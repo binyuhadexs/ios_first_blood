@@ -21,6 +21,18 @@
 		5C0D8BD31F52CA5B00F7864A /* BYTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0D8BD11F52CA5B00F7864A /* BYTableViewViewController.m */; };
 		5C20964B1FBB226900238FDC /* BYNSOperationDefineTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2096491FBB226900238FDC /* BYNSOperationDefineTestViewController.m */; };
 		5C20964C1FBB226900238FDC /* BYNSOperationDefineTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C20964A1FBB226900238FDC /* BYNSOperationDefineTestViewController.xib */; };
+		5C30EB921FCEDF7800C8913A /* BYStrategyPatternViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C30EB901FCEDF7800C8913A /* BYStrategyPatternViewController.m */; };
+		5C30EB931FCEDF7800C8913A /* BYStrategyPatternViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C30EB911FCEDF7800C8913A /* BYStrategyPatternViewController.xib */; };
+		5C30EB961FCF016400C8913A /* BYStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C30EB951FCF016300C8913A /* BYStrategy.m */; };
+		5C30EB991FCF023900C8913A /* BYStrategyA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C30EB981FCF023900C8913A /* BYStrategyA.m */; };
+		5C30EB9C1FCF02D300C8913A /* BYStrategyB.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C30EB9B1FCF02D300C8913A /* BYStrategyB.m */; };
+		5C30EB9F1FCF031500C8913A /* BYStrategyContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C30EB9E1FCF031500C8913A /* BYStrategyContext.m */; };
+		5C30EBA21FCF9C7100C8913A /* BYStrategyUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C30EBA11FCF9C7100C8913A /* BYStrategyUITextField.m */; };
+		5C30EBA51FCF9D2100C8913A /* UITextFieldValidationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C30EBA41FCF9D2100C8913A /* UITextFieldValidationStrategy.m */; };
+		5C30EBAA1FCF9E9100C8913A /* BYNumberValidationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C30EBA91FCF9E9100C8913A /* BYNumberValidationStrategy.m */; };
+		5C30EBAD1FCF9F6E00C8913A /* BYLettersValidationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C30EBAC1FCF9F6E00C8913A /* BYLettersValidationStrategy.m */; };
+		5C30EBB01FCFA09F00C8913A /* BYUserNameValidationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C30EBAF1FCFA09F00C8913A /* BYUserNameValidationStrategy.m */; };
+		5C30EBB31FCFA0E600C8913A /* BYNicknameValidationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C30EBB21FCFA0E600C8913A /* BYNicknameValidationStrategy.m */; };
 		5C3650841FB7E49200A80AEC /* BYMasonryTest2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3650821FB7E49200A80AEC /* BYMasonryTest2ViewController.m */; };
 		5C3650851FB7E49200A80AEC /* BYMasonryTest2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C3650831FB7E49200A80AEC /* BYMasonryTest2ViewController.xib */; };
 		5C3650A21FB8713800A80AEC /* BYThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3650A11FB8713800A80AEC /* BYThreadViewController.m */; };
@@ -162,6 +174,8 @@
 		5CBD93B51FC6CF2D00D83382 /* BYKVCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD93B31FC6CF2D00D83382 /* BYKVCTestViewController.m */; };
 		5CBD93B61FC6CF2D00D83382 /* BYKVCTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CBD93B41FC6CF2D00D83382 /* BYKVCTestViewController.xib */; };
 		5CBD93BA1FC6CF8D00D83382 /* BYKVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD93B91FC6CF8D00D83382 /* BYKVCModel.m */; };
+		5CBD93CA1FCC3B6400D83382 /* BYDesignPatternViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD93C91FCC3B6400D83382 /* BYDesignPatternViewController.m */; };
+		5CBD93CC1FCC3B8C00D83382 /* designPattern.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CBD93CB1FCC3B8C00D83382 /* designPattern.plist */; };
 		5CC3F3801FC5A01E00AAE832 /* BYUIViewFound2TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3F37E1FC5A01E00AAE832 /* BYUIViewFound2TestViewController.m */; };
 		5CC3F3811FC5A01E00AAE832 /* BYUIViewFound2TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC3F37F1FC5A01E00AAE832 /* BYUIViewFound2TestViewController.xib */; };
 		5CC3F3841FC5A17300AAE832 /* BYUIWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3F3831FC5A17300AAE832 /* BYUIWebViewViewController.m */; };
@@ -241,6 +255,30 @@
 		5C2096481FBB226900238FDC /* BYNSOperationDefineTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYNSOperationDefineTestViewController.h; sourceTree = "<group>"; };
 		5C2096491FBB226900238FDC /* BYNSOperationDefineTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYNSOperationDefineTestViewController.m; sourceTree = "<group>"; };
 		5C20964A1FBB226900238FDC /* BYNSOperationDefineTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BYNSOperationDefineTestViewController.xib; sourceTree = "<group>"; };
+		5C30EB8F1FCEDF7800C8913A /* BYStrategyPatternViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYStrategyPatternViewController.h; sourceTree = "<group>"; };
+		5C30EB901FCEDF7800C8913A /* BYStrategyPatternViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYStrategyPatternViewController.m; sourceTree = "<group>"; };
+		5C30EB911FCEDF7800C8913A /* BYStrategyPatternViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BYStrategyPatternViewController.xib; sourceTree = "<group>"; };
+		5C30EB941FCF016300C8913A /* BYStrategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYStrategy.h; sourceTree = "<group>"; };
+		5C30EB951FCF016300C8913A /* BYStrategy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYStrategy.m; sourceTree = "<group>"; };
+		5C30EB971FCF023900C8913A /* BYStrategyA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYStrategyA.h; sourceTree = "<group>"; };
+		5C30EB981FCF023900C8913A /* BYStrategyA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYStrategyA.m; sourceTree = "<group>"; };
+		5C30EB9A1FCF02D300C8913A /* BYStrategyB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYStrategyB.h; sourceTree = "<group>"; };
+		5C30EB9B1FCF02D300C8913A /* BYStrategyB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYStrategyB.m; sourceTree = "<group>"; };
+		5C30EB9D1FCF031500C8913A /* BYStrategyContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYStrategyContext.h; sourceTree = "<group>"; };
+		5C30EB9E1FCF031500C8913A /* BYStrategyContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYStrategyContext.m; sourceTree = "<group>"; };
+		5C30EBA01FCF9C7100C8913A /* BYStrategyUITextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYStrategyUITextField.h; sourceTree = "<group>"; };
+		5C30EBA11FCF9C7100C8913A /* BYStrategyUITextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYStrategyUITextField.m; sourceTree = "<group>"; };
+		5C30EBA31FCF9D2100C8913A /* UITextFieldValidationStrategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldValidationStrategy.h; sourceTree = "<group>"; };
+		5C30EBA41FCF9D2100C8913A /* UITextFieldValidationStrategy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFieldValidationStrategy.m; sourceTree = "<group>"; };
+		5C30EBA81FCF9E9100C8913A /* BYNumberValidationStrategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYNumberValidationStrategy.h; sourceTree = "<group>"; };
+		5C30EBA91FCF9E9100C8913A /* BYNumberValidationStrategy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYNumberValidationStrategy.m; sourceTree = "<group>"; };
+		5C30EBAB1FCF9F6E00C8913A /* BYLettersValidationStrategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYLettersValidationStrategy.h; sourceTree = "<group>"; };
+		5C30EBAC1FCF9F6E00C8913A /* BYLettersValidationStrategy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYLettersValidationStrategy.m; sourceTree = "<group>"; };
+		5C30EBAE1FCFA09F00C8913A /* BYUserNameValidationStrategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYUserNameValidationStrategy.h; sourceTree = "<group>"; };
+		5C30EBAF1FCFA09F00C8913A /* BYUserNameValidationStrategy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYUserNameValidationStrategy.m; sourceTree = "<group>"; };
+		5C30EBB11FCFA0E600C8913A /* BYNicknameValidationStrategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYNicknameValidationStrategy.h; sourceTree = "<group>"; };
+		5C30EBB21FCFA0E600C8913A /* BYNicknameValidationStrategy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYNicknameValidationStrategy.m; sourceTree = "<group>"; };
+		5C30EBB41FCFA85700C8913A /* BYValidationStrategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYValidationStrategy.h; sourceTree = "<group>"; };
 		5C3650811FB7E49200A80AEC /* BYMasonryTest2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYMasonryTest2ViewController.h; sourceTree = "<group>"; };
 		5C3650821FB7E49200A80AEC /* BYMasonryTest2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYMasonryTest2ViewController.m; sourceTree = "<group>"; };
 		5C3650831FB7E49200A80AEC /* BYMasonryTest2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BYMasonryTest2ViewController.xib; sourceTree = "<group>"; };
@@ -484,6 +522,9 @@
 		5CBD93B41FC6CF2D00D83382 /* BYKVCTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BYKVCTestViewController.xib; sourceTree = "<group>"; };
 		5CBD93B81FC6CF8D00D83382 /* BYKVCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYKVCModel.h; sourceTree = "<group>"; };
 		5CBD93B91FC6CF8D00D83382 /* BYKVCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYKVCModel.m; sourceTree = "<group>"; };
+		5CBD93C81FCC3B6400D83382 /* BYDesignPatternViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYDesignPatternViewController.h; sourceTree = "<group>"; };
+		5CBD93C91FCC3B6400D83382 /* BYDesignPatternViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYDesignPatternViewController.m; sourceTree = "<group>"; };
+		5CBD93CB1FCC3B8C00D83382 /* designPattern.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = designPattern.plist; sourceTree = "<group>"; };
 		5CC3F37D1FC5A01E00AAE832 /* BYUIViewFound2TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYUIViewFound2TestViewController.h; sourceTree = "<group>"; };
 		5CC3F37E1FC5A01E00AAE832 /* BYUIViewFound2TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYUIViewFound2TestViewController.m; sourceTree = "<group>"; };
 		5CC3F37F1FC5A01E00AAE832 /* BYUIViewFound2TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BYUIViewFound2TestViewController.xib; sourceTree = "<group>"; };
@@ -629,6 +670,53 @@
 				5CB314541FC2D7130080BBFA /* BYCoreAnimationTestViewController.xib */,
 			);
 			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		5C30EB8E1FCEDF5E00C8913A /* StrategyPattern */ = {
+			isa = PBXGroup;
+			children = (
+				5C30EBA71FCF9E0900C8913A /* textfield */,
+				5C30EBA61FCF9DD500C8913A /* tradition */,
+				5C30EB8F1FCEDF7800C8913A /* BYStrategyPatternViewController.h */,
+				5C30EB901FCEDF7800C8913A /* BYStrategyPatternViewController.m */,
+				5C30EB911FCEDF7800C8913A /* BYStrategyPatternViewController.xib */,
+			);
+			path = StrategyPattern;
+			sourceTree = "<group>";
+		};
+		5C30EBA61FCF9DD500C8913A /* tradition */ = {
+			isa = PBXGroup;
+			children = (
+				5C30EB941FCF016300C8913A /* BYStrategy.h */,
+				5C30EB951FCF016300C8913A /* BYStrategy.m */,
+				5C30EB971FCF023900C8913A /* BYStrategyA.h */,
+				5C30EB981FCF023900C8913A /* BYStrategyA.m */,
+				5C30EB9A1FCF02D300C8913A /* BYStrategyB.h */,
+				5C30EB9B1FCF02D300C8913A /* BYStrategyB.m */,
+				5C30EB9D1FCF031500C8913A /* BYStrategyContext.h */,
+				5C30EB9E1FCF031500C8913A /* BYStrategyContext.m */,
+			);
+			path = tradition;
+			sourceTree = "<group>";
+		};
+		5C30EBA71FCF9E0900C8913A /* textfield */ = {
+			isa = PBXGroup;
+			children = (
+				5C30EBB41FCFA85700C8913A /* BYValidationStrategy.h */,
+				5C30EBA01FCF9C7100C8913A /* BYStrategyUITextField.h */,
+				5C30EBA11FCF9C7100C8913A /* BYStrategyUITextField.m */,
+				5C30EBA31FCF9D2100C8913A /* UITextFieldValidationStrategy.h */,
+				5C30EBA41FCF9D2100C8913A /* UITextFieldValidationStrategy.m */,
+				5C30EBA81FCF9E9100C8913A /* BYNumberValidationStrategy.h */,
+				5C30EBA91FCF9E9100C8913A /* BYNumberValidationStrategy.m */,
+				5C30EBAB1FCF9F6E00C8913A /* BYLettersValidationStrategy.h */,
+				5C30EBAC1FCF9F6E00C8913A /* BYLettersValidationStrategy.m */,
+				5C30EBAE1FCFA09F00C8913A /* BYUserNameValidationStrategy.h */,
+				5C30EBAF1FCFA09F00C8913A /* BYUserNameValidationStrategy.m */,
+				5C30EBB11FCFA0E600C8913A /* BYNicknameValidationStrategy.h */,
+				5C30EBB21FCFA0E600C8913A /* BYNicknameValidationStrategy.m */,
+			);
+			path = textfield;
 			sourceTree = "<group>";
 		};
 		5C3650981FB8380500A80AEC /* Runloop */ = {
@@ -811,6 +899,7 @@
 		5C5789B81FBDE82200314D23 /* Pattern */ = {
 			isa = PBXGroup;
 			children = (
+				5CBD93C71FCC3B3400D83382 /* Design */,
 				5CB3147B1FC4541C0080BBFA /* Algorithm */,
 				5C5789B91FBDE8E500314D23 /* BYPaternPracticeViewController.h */,
 				5C5789BA1FBDE8E500314D23 /* BYPaternPracticeViewController.m */,
@@ -1239,6 +1328,17 @@
 			path = KVO;
 			sourceTree = "<group>";
 		};
+		5CBD93C71FCC3B3400D83382 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				5C30EB8E1FCEDF5E00C8913A /* StrategyPattern */,
+				5CBD93C81FCC3B6400D83382 /* BYDesignPatternViewController.h */,
+				5CBD93C91FCC3B6400D83382 /* BYDesignPatternViewController.m */,
+				5CBD93CB1FCC3B8C00D83382 /* designPattern.plist */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
 		5CC3F3851FC5A17E00AAE832 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1647,6 +1747,7 @@
 				5C7A2E971FC54DD00047E563 /* BYUIViewFoundationTestViewController.xib in Resources */,
 				5CB3141C1FC07E420080BBFA /* FramworkEntrance.plist in Resources */,
 				5CCD9CBD1F4B01D4009D7540 /* LaunchScreen.storyboard in Resources */,
+				5C30EB931FCEDF7800C8913A /* BYStrategyPatternViewController.xib in Resources */,
 				5CB314421FC272970080BBFA /* BYRunloopTestViewController.xib in Resources */,
 				5C0008DC1FBA0E6500E8AB69 /* BYNSOperationTestViewController.xib in Resources */,
 				5C5789C61FBDF09E00314D23 /* sb.gif in Resources */,
@@ -1656,6 +1757,7 @@
 				5CC3F39B1FC6A0B900AAE832 /* BYQuartsCoreTest2ViewController.xib in Resources */,
 				5C6C82D81FB5CA9000FA8171 /* README.md in Resources */,
 				5CCD9CBA1F4B01D4009D7540 /* Assets.xcassets in Resources */,
+				5CBD93CC1FCC3B8C00D83382 /* designPattern.plist in Resources */,
 				5CB3144C1FC28B760080BBFA /* BYUIAnimationViewController.xib in Resources */,
 				5C5789C21FBDECB600314D23 /* UIItem.plist in Resources */,
 				5C0D8BC91F52C98900F7864A /* AnimationTest.plist in Resources */,
@@ -1774,12 +1876,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CB313FC1FBFE7930080BBFA /* NSArray+Log.m in Sources */,
+				5C30EB9F1FCF031500C8913A /* BYStrategyContext.m in Sources */,
 				5C5789661FBDDFEF00314D23 /* SDWebImageManager.m in Sources */,
 				5CB314001FC069AC0080BBFA /* BYSessionTestViewController.m in Sources */,
 				5CB3144B1FC28B760080BBFA /* BYUIAnimationViewController.m in Sources */,
 				5C5789671FBDDFEF00314D23 /* SDWebImagePrefetcher.m in Sources */,
 				5C5789791FBDE65200314D23 /* BYSDWebImageTestViewController.m in Sources */,
 				5C6C82D41FB5CA9000FA8171 /* NSArray+MASAdditions.m in Sources */,
+				5C30EB991FCF023900C8913A /* BYStrategyA.m in Sources */,
 				5C6C827E1FB570CB00FA8171 /* BYAutolayout4ViewController.m in Sources */,
 				5CB3140D1FC079670080BBFA /* HKDownloaderManager.m in Sources */,
 				5C3650841FB7E49200A80AEC /* BYMasonryTest2ViewController.m in Sources */,
@@ -1790,6 +1894,8 @@
 				5C7A2E801FC526B20047E563 /* BYXibTestView.m in Sources */,
 				5CBD93AD1FC6BDB200D83382 /* HandleImageView.m in Sources */,
 				5CB314701FC411F20080BBFA /* BYCopyTestViewController.m in Sources */,
+				5C30EB921FCEDF7800C8913A /* BYStrategyPatternViewController.m in Sources */,
+				5C30EBAD1FCF9F6E00C8913A /* BYLettersValidationStrategy.m in Sources */,
 				5C6C82D61FB5CA9000FA8171 /* View+MASAdditions.m in Sources */,
 				5C20964B1FBB226900238FDC /* BYNSOperationDefineTestViewController.m in Sources */,
 				5C3650A21FB8713800A80AEC /* BYThreadViewController.m in Sources */,
@@ -1799,14 +1905,18 @@
 				5CCD9D001F4B0B51009D7540 /* BYUINavigationController.m in Sources */,
 				5C5789231FBDDA7700314D23 /* Reachability.m in Sources */,
 				5C0008D41FB9E97300E8AB69 /* BYGCDTest1ViewController.m in Sources */,
+				5C30EBB01FCFA09F00C8913A /* BYUserNameValidationStrategy.m in Sources */,
 				5C57896A1FBDDFEF00314D23 /* UIImage+MultiFormat.m in Sources */,
 				5C57896C1FBDDFEF00314D23 /* UIImageView+HighlightedWebCache.m in Sources */,
+				5C30EBAA1FCF9E9100C8913A /* BYNumberValidationStrategy.m in Sources */,
 				5C5789751FBDE45800314D23 /* BYSDWebImageViewController.m in Sources */,
 				5C5789D71FBEDCA700314D23 /* BYTestSimplePingViewController.m in Sources */,
 				5C7A2E7D1FC51CF80047E563 /* BYCodeTestView.m in Sources */,
 				5C57892C1FBDDB4800314D23 /* BYNetworkViewController.m in Sources */,
 				5CB3145E1FC31E7E0080BBFA /* BYBlockTestViewController.m in Sources */,
 				5C5789691FBDDFEF00314D23 /* UIImage+GIF.m in Sources */,
+				5C30EB9C1FCF02D300C8913A /* BYStrategyB.m in Sources */,
+				5C30EBA21FCF9C7100C8913A /* BYStrategyUITextField.m in Sources */,
 				5C5789631FBDDFEF00314D23 /* SDWebImageDecoder.m in Sources */,
 				5CBD93B51FC6CF2D00D83382 /* BYKVCTestViewController.m in Sources */,
 				5C6C82D21FB5CA9000FA8171 /* MASViewAttribute.m in Sources */,
@@ -1857,6 +1967,7 @@
 				5C57896B1FBDDFEF00314D23 /* UIImage+WebP.m in Sources */,
 				5C6C82DB1FB5FB0B00FA8171 /* BYAutolayout5ViewController.m in Sources */,
 				5C5789641FBDDFEF00314D23 /* SDWebImageDownloader.m in Sources */,
+				5C30EBB31FCFA0E600C8913A /* BYNicknameValidationStrategy.m in Sources */,
 				5CCD9D1C1F4B342C009D7540 /* BYObjectCViewController.m in Sources */,
 				5C3C43981F85BBC800D66D80 /* BYLabelTestViewController.m in Sources */,
 				5C7A2E8C1FC54CBC0047E563 /* BYTableViewTestViewController.m in Sources */,
@@ -1867,6 +1978,7 @@
 				5CC965B71FA42D7B00F91B10 /* BYObject.m in Sources */,
 				5CB314671FC3D6580080BBFA /* BYArchiverTestViewController.m in Sources */,
 				5CCD9CAC1F4B01D4009D7540 /* main.m in Sources */,
+				5CBD93CA1FCC3B6400D83382 /* BYDesignPatternViewController.m in Sources */,
 				5CB3146B1FC3D6D60080BBFA /* BYWorker.m in Sources */,
 				5C5789721FBDE34500314D23 /* BYDataCacheViewController.m in Sources */,
 				5CCD9CFA1F4B0431009D7540 /* BYViewController.m in Sources */,
@@ -1882,6 +1994,7 @@
 				5CBD93A51FC6BD9F00D83382 /* ClockView.m in Sources */,
 				5C6C82E41FB6941F00FA8171 /* BYViewTest1ViewController.m in Sources */,
 				5CB3140C1FC079670080BBFA /* HKDownloader.m in Sources */,
+				5C30EBA51FCF9D2100C8913A /* UITextFieldValidationStrategy.m in Sources */,
 				5C5789611FBDDFEF00314D23 /* SDImageCache.m in Sources */,
 				5C6C82D51FB5CA9000FA8171 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				5CB314381FC1D5240080BBFA /* Boy+EatingChange.m in Sources */,
@@ -1889,6 +2002,7 @@
 				5C0D8BC61F52C92E00F7864A /* BYAnimationTestViewController.m in Sources */,
 				5C5789CF1FBED74700314D23 /* BYPingViewController.m in Sources */,
 				5CC965B41FA42A4200F91B10 /* BYWebViewController.m in Sources */,
+				5C30EB961FCF016400C8913A /* BYStrategy.m in Sources */,
 				5C5789C41FBDECB600314D23 /* BYUIViewTestViewController.m in Sources */,
 				5C6C82D01FB5CA9000FA8171 /* MASConstraintMaker.m in Sources */,
 				5CB314431FC2746C0080BBFA /* BYRunloopTestViewController.m in Sources */,
