@@ -7,9 +7,25 @@
 //
 
 #import "BYCALayerTest1ViewController.h"
+#define angle2Rad(angle) ((angle) / 180.0 * M_PI)
+
+//每一秒旋转6度
+#define perSecondA 6
+
+//每一分旋转
+#define perMinA 6
+
+//每一小时旋转30
+#define perHourA 30
+//第一分时针旋转的度数
+#define perMinHour 0.5
 
 @interface BYCALayerTest1ViewController ()<CALayerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *redView;
+@property (weak, nonatomic) IBOutlet UIImageView *clockView;
+@property(nonatomic,weak)CALayer *secondL;
+@property(nonatomic,weak)CALayer *minuteL;
+@property(nonatomic,weak)CALayer *hourL;
 
 @property (weak, nonatomic) CALayer *sublayer;
 @property (assign, nonatomic) BOOL ok;
@@ -25,8 +41,8 @@
 
  UIView和 CALayer的平行层级
  
- 
- 
+ 视图 图层树 呈现树
+ 呈现图层是由呈现树中的所有图层的的呈现图层所形成
  */
 
 
@@ -119,12 +135,52 @@ transform
  */
 
 /*
- 隐式动画
+ http://blog.csdn.net/u011774517/article/details/66967648
+ 隐式动画: 因为我们并没有指定任何动画的类型，只是修改了属性，CoreAnimation来决定什么时候显示动画
  事务
  CATransaction
  setCompletionBlock //完成块
+ //隐藏隐式动画
+ [UIView beginAnimations:nil context:nil];//
+ [CATransaction setDisableActions:YES];
+ */
+
+/*
+ 隐式动画的实现：
+ 当CALayer的属性被修改的时候，它会调用-actionForKey:方法传递名称。
+ （1）图层首先检查它是否有委托，如果有CALayerDelegate，就在委托中查找-actionForLayer:forKey:方法，如果有-actionForLayer:forKey:调用它并返回。
+ （2）如果没有委托或委托中没有实现-actionForLayer:forKey:方法，图层会检查actions字典，actions字典是属性名称对应行为的映射字典。
+ （3）如果actions字典中没有对应的属性名称，图层就检查style字典
+ （4）如果style中也没有对应的行为，那么图层将直接调用-defaultActionForKey:方法，
+ 搜索完，-actionForKey:方法要么返回空(不会有动画发生)，要么是CAAction协议对应的对象，然后CALayer拿这个结果对先前和当前的值做动画。
+ */
+
+/*
+ 显示动画
  
  */
+
+/*
+ 图层时间
+ */
+/*
+ 性能调优
+ 运行动画的过程
+ 1、布局
+ 2、显示 draw
+ 3、准备
+ 4、提交
+ 5、对所有的图层属性计算中间值
+ 6、渲染可见三角行
+ 
+ 会影响图层绘制
+ 1、太多的几何结构
+ 2、重绘 -- 重叠的半透明图层
+ 3、离屏绘制
+ 4、过大的图片
+ 
+ */
+
 
 
 @implementation BYCALayerTest1ViewController
@@ -132,24 +188,22 @@ transform
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self layerDemo];
-    [self layerPropertyDemo];
-    [CATransaction setCompletionBlock:^{
-        
-    }];
-    
-    
+//    [self layerPropertyDemo];
+//    [self clockDemo];
+ 
 }
-//- (id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event{
-//
-//}
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    if (_ok) {
-         [self layerDemo1];
-    } else {
-         [self showPosition];
-//         [self demo1];
-    }
+//    if (_ok) {
+//         [self layerDemo1];
+//    } else {
+//         [self showPosition];
+////         [self demo1];
+//    }
+    
+    //验证自定义行为
+//    self.sublayer.backgroundColor = [UIColor redColor].CGColor;
 }
 
 - (void)layerPropertyDemo{
@@ -179,6 +233,12 @@ transform
     CALayer *layer = [CALayer layer];
     layer.frame = self.redView.frame;
     layer.backgroundColor = [UIColor grayColor].CGColor;
+    //
+    //给图层添加一个自定义的行为
+//    CATransition *transition =[CATransition animation];
+//    transition.type = kCATransitionPush;
+//    transition.subtype = kCATransitionFromLeft;
+//    layer.actions = @{@"backgroundColor":transition};
     self.sublayer = layer;
     [self.view.layer addSublayer:layer]; //添加图层
     [self showPosition];
@@ -271,7 +331,6 @@ transform
     [CATransaction commit];
 }
 
-
 - (UIColor *)randomColor{
     CGFloat r = arc4random_uniform(256) /255.0;
     CGFloat g = arc4random_uniform(256) /255.0;
@@ -279,9 +338,105 @@ transform
     return [UIColor colorWithRed:r green:g blue:b alpha:1];
 }
 
-//- (nullable id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event{
-//
-//}
+
+
+
+
+#pragma mark ClockDemo
+-(void)clockDemo{
+    //添加时针
+    [self addHour];
+    
+    //添加分针
+    [self addMinue];
+    
+    //添加秒针
+    [self addSecond];
+    
+    //添加定时器
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeChage) userInfo:nil repeats:YES];
+    [self timeChage];
+}
+
+//每一少调用一次
+- (void)timeChage{
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    //components日历单元:年,月,日,时,分,秒
+    //fromDate:从哪个时间开始取
+    
+    
+    NSDateComponents *cmp = [calendar components:NSCalendarUnitSecond | NSCalendarUnitMinute | NSCalendarUnitHour fromDate:[NSDate date]];
+    //获取当前是多少秒
+    NSInteger curSecond =  cmp.second;
+    //获取当前是多少分
+    NSInteger curMinute =  cmp.minute;
+    
+    //获取当前是多少小时
+    NSInteger curHour = cmp.hour;
+    
+    
+    //秒针旋转多少度.
+    CGFloat angle = curSecond * perSecondA;
+    self.secondL.transform = CATransform3DMakeRotation(angle2Rad(angle), 0, 0, 1);
+    
+    
+    //让分针开始旋转
+    CGFloat minuteA = curMinute * perMinA;
+    self.minuteL.transform =  CATransform3DMakeRotation(angle2Rad(minuteA), 0, 0, 1);
+    
+    //让时针开始旋转
+    CGFloat hourA = curHour * perHourA + curMinute * perMinHour;
+    self.hourL.transform =  CATransform3DMakeRotation(angle2Rad(hourA), 0, 0, 1);
+    
+    
+}
+
+//添加秒针
+- (void)addSecond{
+    
+    //一般做旋转,缩放,都是根据锚点进旋转,缩放
+    
+    CALayer *layer = [CALayer layer];
+    layer.backgroundColor = [UIColor redColor].CGColor;
+    layer.bounds = CGRectMake(0, 0, 1, 80);
+    layer.position = CGPointMake(self.clockView.bounds.size.width * 0.5, self.clockView.bounds.size.height * 0.5);
+    layer.anchorPoint = CGPointMake(0.5, 1);
+    self.secondL = layer;
+    [self.clockView.layer addSublayer:layer];
+    
+}
+
+//添加秒针
+- (void)addMinue{
+    
+    //一般做旋转,缩放,都是根据锚点进旋转,缩放
+    
+    CALayer *layer = [CALayer layer];
+    layer.backgroundColor = [UIColor blackColor].CGColor;
+    layer.bounds = CGRectMake(0, 0, 3, 70);
+    layer.position = CGPointMake(self.clockView.bounds.size.width * 0.5, self.clockView.bounds.size.height * 0.5);
+    layer.anchorPoint = CGPointMake(0.5, 1);
+    self.minuteL = layer;
+    [self.clockView.layer addSublayer:layer];
+    
+}
+
+
+//添加时针
+- (void)addHour{
+    
+    //一般做旋转,缩放,都是根据锚点进旋转,缩放
+    
+    CALayer *layer = [CALayer layer];
+    layer.backgroundColor = [UIColor blackColor].CGColor;
+    layer.bounds = CGRectMake(0, 0, 3, 50);
+    layer.position = CGPointMake(self.clockView.bounds.size.width * 0.5, self.clockView.bounds.size.height * 0.5);
+    layer.anchorPoint = CGPointMake(0.5, 1);
+    self.hourL = layer;
+    [self.clockView.layer addSublayer:layer];
+    
+}
 
 
 @end

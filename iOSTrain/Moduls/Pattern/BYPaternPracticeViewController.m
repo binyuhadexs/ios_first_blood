@@ -8,9 +8,22 @@
 
 #import "BYPaternPracticeViewController.h"
 
+
 @interface BYPaternPracticeViewController ()
 
 @end
+
+/*
+ 架构：
+ 
+ MVC
+ MVP
+ MVVM
+ VIPER
+ 
+ http://www.cocoachina.com/ios/20160108/14916.html
+ 
+ */
 
 @implementation BYPaternPracticeViewController
 
@@ -20,7 +33,7 @@
 }
 
 - (void)by_viewDidLoad{
-    self.title = @"设计模式";
+    self.title = @"架构";
 }
 
 

@@ -8,6 +8,12 @@
 
 #import "BYOOPViewController.h"
 
+/*
+ https://zonble.gitbooks.io/kkbox-ios-dev/content/index.html
+ http://blog.leichunfeng.com/blog/2015/04/25/objective-c-object-model/
+ 
+ */
+
 @interface BYOOPViewController ()
 
 //@property (nonatomic,a)
@@ -91,15 +97,41 @@
  */
 
 /*
+ Category实现原理
+ remethodizeClass
+ 1 将 Category 和它的主类（或元类）注册到哈希表中；
+ 2 如果主类（或元类）已实现，那么重建它的方法列表。
+ Category 中的实例方法和属性被整合到主类中；而类方法则被整合到元类中.Category 中的协议被同时整合到了主类和元类中
+ 
+ */
+
+/*
+ load VS initialize
+ +load 方法是当类或分类被添加到 Objective-C runtime 时被调用  父类->子类->分类（子类、父类和分类中的 +load 方法的实现是被区别对待，子类没有实现 +load 方法不会去调用父类的）       类和分类都执行       1次
+ +initialize 方法是在类或它的子类收到第一条消息之前被调用,包括实例方法和类方法 父类->子类   多次(子类没有实现 +initialize 方法 父类的实现是会被执行多次)
+ http://blog.leichunfeng.com/blog/2015/05/02/objective-c-plus-load-vs-plus-initialize/
+ */
+
+/*
+ Fast Enumeration
+ http://blog.leichunfeng.com/blog/2016/06/20/objective-c-fast-enumeration-implementation-principle/
+ */
+
+/*
+ Autorelease Pool
+ http://blog.leichunfeng.com/blog/2015/05/31/objective-c-autorelease-pool-implementation-principle/
+ 
+ */
+
+
+/*
+ 内存管理
+ 
  
  
  */
 
 
-
-
-//内存管理
-//委托代理模式
 
 /*
  KVC

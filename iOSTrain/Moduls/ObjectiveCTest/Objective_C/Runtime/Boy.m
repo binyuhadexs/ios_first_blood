@@ -25,11 +25,11 @@
 }
 
 /***方法交换**/
-//+(void)load{
-//    Method methodDrink =  class_getInstanceMethod([Boy class], @selector(drink));
-//    Method methodEating =  class_getInstanceMethod([Boy class], @selector(eating));
-//    method_exchangeImplementations(methodDrink, methodEating);
-//}
++(void)load{
+    Method methodDrink =  class_getInstanceMethod([Boy class], @selector(drink));
+    Method methodEating =  class_getInstanceMethod([Boy class], @selector(eating));
+    method_exchangeImplementations(methodDrink, methodEating);
+}
 
 -(void)drink{
     NSLog(@"drink -----ing");

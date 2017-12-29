@@ -13,6 +13,9 @@
 @interface BYNSStringTestViewController ()
 
 @property (nonatomic,strong) BYWebPramaWrapper *wrapper;
+@property (nonatomic,copy) NSString *NSStringStr;
+@property (nonatomic,copy) NSMutableString *NSMutableStringStr;
+@property (nonatomic,strong) NSMutableString *NSMutableStringStr2;
 
 @end
 
@@ -24,8 +27,31 @@
     self.wrapper = [[BYWebPramaWrapper alloc] init];
     
     [self test];
-    [self abc];
-    [self abcd:@"abcd"];
+    
+    NSMutableString *string = [NSMutableString stringWithFormat:@"%@",@"abcd"];
+    //  [[[NSMutableString alloc] init] appendString:@"1234567"];
+    
+    self.NSStringStr = [string copy];
+    self.NSMutableStringStr = string;
+    self.NSMutableStringStr2 = string;//[string mutableCopy];
+    NSLog(@"string=%@=%p",string);
+    
+    NSLog(@"NSStringStr=%@=%p",self.NSStringStr,self.NSStringStr);
+    NSLog(@"NSMutableStringStr=%@=%p",self.NSMutableStringStr,self.NSMutableStringStr);
+    NSLog(@"NSMutableStringStr2=%@=%p",self.NSMutableStringStr2,self.NSMutableStringStr2);
+    [string appendString:@"abcd"];
+     NSLog(@"string=%@=%p",string,string);
+    NSLog(@"NSStringStr=%@=%p",self.NSStringStr,self.NSStringStr);
+    NSLog(@"NSMutableStringStr=%@=%p",self.NSMutableStringStr,self.NSMutableStringStr);
+    NSLog(@"NSMutableStringStr2=%@=%p",self.NSMutableStringStr2,self.NSMutableStringStr2);
+    
+     [self.NSMutableStringStr2 appendString:@"abcd"];
+     NSLog(@"NSMutableStringStr2=%@=%p",self.NSMutableStringStr2,self.NSMutableStringStr2);
+    
+//     [self.NSMutableStringStr2 appendString:@"8910"];
+//         [self.NSMutableStringStr2 appendString:@"8910"];
+    //     NSLog(@"NSMutableStringStr2=%@",self.NSMutableStringStr2);
+    
 }
 
 #pragma -mark NSString
@@ -44,61 +70,6 @@
      NSString *str1 = @"abc";
      NSString *str2 =[[NSString alloc] init];
 //    NSString *str3 = [];
-
-}
-void functionAbc(id self,SEL _cmd){
-    NSLog(@"%@,%p",self,_cmd);
-}
-
-//class_getMethodImplementation
-
-
-- (void)abcdefg:(NSString *)abc{
-    NSLog(@"abc=%@",abc);
-}
-
-+ (BOOL)resolveClassMethod:(SEL)sel{
-    
-    
-    return NO;
-}
-
-+(BOOL)resolveInstanceMethod:(SEL)sel{
-    NSString *selectorStr = NSStringFromSelector(sel);
-    if ([selectorStr isEqualToString:@"abc"]) {
-        class_addMethod(self.class,@selector(abc),(IMP)functionAbc,"@:");
-        return YES;
-    }
-//    else if (sel == @selector(abcd:)){ class_addMethod(self.class,sel,class_getMethodImplementation(self,@selector(abcdefg:)),"s@:@");
-//        return YES;
-//    }
-    
-    return [super resolveInstanceMethod:sel];
-}
-
-
-- (id)forwardingTargetForSelector:(SEL)aSelector{
-    if (@selector(abcd:) == aSelector) {
-//        return _wrapper;
-    }
-    return [super forwardingTargetForSelector:aSelector];
-}
-
-//
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector{
-    NSMethodSignature *signature = [super methodSignatureForSelector:aSelector];
-    if (!signature) {
-        if ([BYWebPramaWrapper instancesRespondToSelector:aSelector] ) {
-            signature = [BYWebPramaWrapper instanceMethodSignatureForSelector:aSelector];
-        }
-    }
-    return signature;
-}
-
-- (void)forwardInvocation:(NSInvocation *)anInvocation{
-    if ([BYWebPramaWrapper instancesRespondToSelector:anInvocation.selector]) {
-        [anInvocation invokeWithTarget:_wrapper];
-    }
 }
 
 

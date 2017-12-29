@@ -23,25 +23,37 @@
                 <key>name</key>
                 <string>排序算法</string>
             </dict>
+            <dict>
+                <key>controller</key>
+                <string>BYAlgorithmTestViewController</string>
+                <key>name</key>
+                <string>LeetCode算法题</string>
+            </dict>
         </array>
         <array>
             <dict>
                 <key>controller</key>
-                <string>BYNSThreadTestViewController</string>
+                <string>BYMVCDemoViewController</string>
                 <key>name</key>
                 <string>MVC</string>
             </dict>
             <dict>
                 <key>controller</key>
-                <string>BYNSThreadTestViewController</string>
+                <string>BYMVPDemoViewController</string>
+                <key>name</key>
+                <string>MVP</string>
+            </dict>
+            <dict>
+                <key>controller</key>
+                <string>BYMVVMDemoViewController</string>
                 <key>name</key>
                 <string>MVVM</string>
             </dict>
             <dict>
                 <key>controller</key>
-                <string>BYNSThreadTestViewController</string>
+                <string>BYVIPERDemoViewController</string>
                 <key>name</key>
-                <string>MVP</string>
+                <string>VIPRE</string>
             </dict>
         </array>
     </array>

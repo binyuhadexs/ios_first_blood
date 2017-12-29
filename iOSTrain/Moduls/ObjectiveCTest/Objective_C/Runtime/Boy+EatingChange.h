@@ -10,7 +10,9 @@
 
 @interface Boy (EatingChange)
 
--(void)exchange_eating;
+@property (strong, nonatomic) NSString *associatedObjectStr;
 
+-(void)exchange_eating;
+-(void)removeAssociatedObjectStr;
 
 @end

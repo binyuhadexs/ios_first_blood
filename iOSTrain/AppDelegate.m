@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 
+#import <WeexSDK/WeexSDK.h>
+#import "WXImgLoaderDefaultImpl.h"
+
 
 @interface AppDelegate ()
 
@@ -28,6 +31,8 @@
     
     self.window.rootViewController = rootController;
     
+    //初始化WeexSDK
+//    [self initWEEK];
     
     return YES;
 }
@@ -106,5 +111,28 @@
         abort();
     }
 }
+
+#pragma mark - WEEK DEMO
+
+- (void)initWEEK {
+    //business configuration
+    [WXAppConfiguration setAppGroup:@"AliApp"];
+    [WXAppConfiguration setAppName:@"WeexDemo"];
+    [WXAppConfiguration setAppVersion:@"1.0.0"];
+    //init sdk environment
+    [WXSDKEngine initSDKEnvironment];
+    //register custom module and component，optional
+//    [WXSDKEngine registerComponent:@"MyView" withClass:[MyViewComponent class]];
+//    [WXSDKEngine registerModule:@"event" withClass:[WXEventModule class]];
+    //register the implementation of protocol, optional
+//    [WXSDKEngine registerHandler:[WXNavigationDefaultImpl new] withProtocol:@protocol(WXNavigationProtocol)];
+    
+//    [WXSDKEngine registerModule:@"event" withClass:NSClassFromString(@"WXEventModule")];
+//    [WXSDKEngine registerHandler:[WXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)];
+    
+    //set the log level
+    [WXLog setLogLevel: WXLogLevelAll];
+}
+
 
 @end

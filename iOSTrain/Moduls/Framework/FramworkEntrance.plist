@@ -17,7 +17,7 @@
             </dict>
             <dict>
                 <key>controller</key>
-                <string></string>
+                <string>BYAFNDmeoViewController</string>
                 <key>name</key>
                 <string>AFNetwork</string>
             </dict>
@@ -25,7 +25,13 @@
                 <key>controller</key>
                 <string></string>
                 <key>name</key>
-                <string>SDImageView</string>
+                <string>SDWebImage</string>
+            </dict>
+            <dict>
+                <key>controller</key>
+                <string>BYWEEKDemoViewController</string>
+                <key>name</key>
+                <string>WEEK</string>
             </dict>
         </array>
         <array>

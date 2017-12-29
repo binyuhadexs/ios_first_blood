@@ -125,6 +125,8 @@
                                                           failure:failure];
 
     [dataTask resume];
+//    [dataTask suspend];
+//    [dataTask cancel];
 
     return dataTask;
 }

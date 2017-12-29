@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    CGRect mains= [UIScreen mainScreen].bounds;
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, mains.size.width,mains.size.height) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, mains.size.width,mains.size.height-64) style:UITableViewStyleGrouped];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
     [self.view addSubview:_tableView];

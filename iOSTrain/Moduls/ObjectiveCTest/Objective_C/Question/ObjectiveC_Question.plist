@@ -11,6 +11,14 @@
 			<key>url</key>
 			<string>http://www.cnblogs.com/stevenschen/p/3825044.html</string>
 		</dict>
+        <dict>
+            <key>controller</key>
+            <string>BYWebViewController</string>
+            <key>name</key>
+            <string>weak修饰的变量的对象在被销毁时自动置为nil的呢</string>
+            <key>url</key>
+            <string>http://www.jianshu.com/p/4a32fb8648a3</string>
+        </dict>
 	</array>
     <array>
         <dict>
@@ -20,6 +28,14 @@
             <string>Category和Extention原理详解</string>
             <key>url</key>
             <string>http://www.cocoachina.com/ios/20170502/19163.html</string>
+        </dict>
+        <dict>
+            <key>controller</key>
+            <string>BYWebViewController</string>
+            <key>name</key>
+            <string>图片的解压缩</string>
+            <key>url</key>
+            <string>http://blog.leichunfeng.com/blog/2017/02/20/talking-about-the-decompression-of-the-image-in-ios/</string>
         </dict>
     </array>
     <array>

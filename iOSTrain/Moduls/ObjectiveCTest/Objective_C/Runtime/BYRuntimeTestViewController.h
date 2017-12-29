@@ -10,4 +10,7 @@
 
 @interface BYRuntimeTestViewController : BYViewController
 
+- (void)abc;
+- (void)abcd:(NSString *)abc;
+
 @end

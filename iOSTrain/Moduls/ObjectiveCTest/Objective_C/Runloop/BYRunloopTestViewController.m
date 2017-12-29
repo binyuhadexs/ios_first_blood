@@ -8,6 +8,8 @@
 
 #import "BYRunloopTestViewController.h"
 
+//http://www.cocoachina.com/ios/20150601/11970.html
+
 /*
  http://www.imlifengfeng.com/blog/?p=487
  Runloop
@@ -40,7 +42,48 @@
  
  */
 
-@interface BYRunloopTestViewController ()
+
+/*
+ //http:www.cocoachina.com/ios/20150601/11970.html
+ https:blog.ibireme.com/2015/05/18/runloop/
+ 
+ http:blog.csdn.net/u011619283/article/details/53483965
+ 
+ https:developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html
+ 
+ */
+/*
+ 为什么UI在主线程
+ 如果多线程，必然会出现锁 -- 抢夺资源 -- 性能下降
+ UI操作不涉及多线程，就没有这个问题。统一在主线程中修改UI
+ 
+ source 事件源
+ 
+ */
+
+//定义一个block
+typedef BOOL(^RunloopBlock)(void);
+
+static NSString *IDENTIFIER = @"IDENTIFIER";
+
+static CGFloat CELL_HEIGHT = 135.f;
+
+@interface BYRunloopTestViewController ()<UITableViewDataSource, UITableViewDelegate>
+
+/** 存放任务的数组  */
+@property(nonatomic,strong)NSMutableArray * tasks;
+/** 任务标记  */
+@property(nonatomic,strong)NSMutableArray * tasksKeys;
+/** 最大任务数 */
+@property(assign,nonatomic)NSUInteger max;
+
+
+/** timer  */
+@property(nonatomic,strong)NSTimer * timer;
+
+@property (nonatomic, strong) UITableView *exampleTableView;
+
+@property (nonatomic,assign) BOOL finish;
 
 @end
 
@@ -52,6 +95,10 @@
 //      [self observeDemo];
   
 //    [UIApplication sharedApplication].notif;
+    
+    //     [NSThread exit]; 程序继续运行，UI没有响应，UIKit运行在主线程。进程还在
+    
+    //    [self testThread];
 }
 
 - (void)changeModel{
@@ -142,5 +189,267 @@
      */
     CFRelease(observer);
 }
+
+#pragma RUNLOOP Demo
+
+-(void)_timerFiredMethod{
+    
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.exampleTableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    self.exampleTableView.delegate = self;
+    self.exampleTableView.dataSource = self;
+    [self.view addSubview:self.exampleTableView];
+    
+    _max = 30;
+    _tasks = [NSMutableArray array];
+    _tasksKeys = [NSMutableArray array];
+    
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(_timerFiredMethod) userInfo:nil repeats:YES];
+    
+    //注册Cell
+    [self.exampleTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:IDENTIFIER];
+    
+    //注册监听
+    [self addRunloopObserver];
+    
+}
+
+//MARK: 内部实现方法
+//加载第一张
++(void)addImage1With:(UITableViewCell *)cell{
+    //第一张
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 20, 85, 85)];
+    imageView.tag = 1;
+    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"spaceship" ofType:@"png"];
+    UIImage *image = [UIImage imageWithContentsOfFile:path1];//spaceship
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    imageView.image = image;
+    [UIView transitionWithView:cell.contentView duration:0.3 options:(UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve) animations:^{
+        [cell.contentView addSubview:imageView];
+    } completion:nil];
+}
+//加载第二张
++(void)addImage2With:(UITableViewCell *)cell{
+    //第二张
+    UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(105, 20, 85, 85)];
+    imageView1.tag = 2;
+    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"spaceship" ofType:@"png"];
+    UIImage *image1 = [UIImage imageWithContentsOfFile:path1];
+    imageView1.contentMode = UIViewContentModeScaleAspectFit;
+    imageView1.image = image1;
+    [UIView transitionWithView:cell.contentView duration:0.3 options:(UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve) animations:^{
+        [cell.contentView addSubview:imageView1];
+    } completion:nil];
+}
+//加载第三张
++(void)addImage3With:(UITableViewCell *)cell{
+    //第三张
+    UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(200, 20, 85, 85)];
+    imageView2.tag = 3;
+    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"spaceship" ofType:@"png"];
+    UIImage *image2 = [UIImage imageWithContentsOfFile:path1];
+    imageView2.contentMode = UIViewContentModeScaleAspectFit;
+    imageView2.image = image2;
+    [UIView transitionWithView:cell.contentView duration:0.3 options:(UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve) animations:^{
+        [cell.contentView addSubview:imageView2];
+    } completion:nil];
+}
+
+//MARK:  UI初始化方法
+//设置tableview大小
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.exampleTableView.frame = self.view.bounds;
+}
+
+//Cell 高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return CELL_HEIGHT;
+}
+
+//加载tableview
+//- (void)loadView {
+//    self.view = [UIView alloc] initWithFrame:CGRectMake(0, 0, , <#CGFloat height#>);
+//    self.exampleTableView = [UITableView new];
+//    self.exampleTableView.delegate = self;
+//    self.exampleTableView.dataSource = self;
+//    [self.view addSubview:self.exampleTableView];
+//}
+
+#pragma mark - <tableview>
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 399;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:IDENTIFIER];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    //干掉contentView上面的子控件!! 节约内存!!
+    for (NSInteger i = 1; i <= 3; i++) {
+        //干掉contentView 上面的所有子控件!!
+        [[cell.contentView viewWithTag:i] removeFromSuperview];
+    }
+    //不要直接加载图片!! 你将加载图片的代码!都给RunLoop!!
+    [self addTask:^BOOL{
+        [BYRunloopTestViewController addImage1With:cell];
+        return YES;
+    } withKey:indexPath];
+    [self addTask:^BOOL{
+        [BYRunloopTestViewController addImage2With:cell];
+        return YES;
+    } withKey:indexPath];
+    [self addTask:^BOOL{
+        [BYRunloopTestViewController addImage3With:cell];
+        return YES;
+    } withKey:indexPath];
+    return cell;
+}
+
+
+
+
+#pragma mark - <RunLoop>
+
+//MARK: 添加任务
+-(void)addTask:(RunloopBlock)unit withKey:(id)key{
+    [self.tasks addObject:unit];
+    [self.tasksKeys addObject:key];
+    //保证之前没有显示出来的任务,不再浪费时间加载
+    if (self.tasks.count > self.max) {
+        [self.tasks removeObjectAtIndex:0];
+        [self.tasksKeys removeObjectAtIndex:0];
+    }
+    
+}
+
+
+
+//MARK: 回调函数
+//定义一个回调函数  一次RunLoop来一次
+static void Callback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info){
+    BYRunloopTestViewController * vc = (__bridge BYRunloopTestViewController *)(info);
+    if (vc.tasks.count == 0) {
+        return;
+    }
+    BOOL result = NO;
+    while (result == NO && vc.tasks.count) {
+        //取出任务
+        RunloopBlock unit = vc.tasks.firstObject;
+        //执行任务
+        result = unit();
+        //干掉第一个任务
+        [vc.tasks removeObjectAtIndex:0];
+        //干掉标示
+        [vc.tasksKeys removeObjectAtIndex:0];
+    }
+    
+}
+
+//这里面都是C语言 -- 添加一个监听者
+-(void)addRunloopObserver{
+    //获取当前的RunLoop
+    CFRunLoopRef runloop = CFRunLoopGetCurrent();
+    //定义一个centext
+    CFRunLoopObserverContext context = {
+        0,
+        ( __bridge void *)(self),
+        &CFRetain,
+        &CFRelease,
+        NULL
+    };
+    //定义一个观察者
+    static CFRunLoopObserverRef defaultModeObsever;
+    //创建观察者
+    defaultModeObsever = CFRunLoopObserverCreate(NULL,
+                                                 kCFRunLoopBeforeWaiting,
+                                                 YES,
+                                                 NSIntegerMax - 999,
+                                                 &Callback,
+                                                 &context
+                                                 );
+    
+    //添加当前RunLoop的观察者
+    CFRunLoopAddObserver(runloop, defaultModeObsever, kCFRunLoopDefaultMode);
+    //c语言有creat 就需要release
+    CFRelease(defaultModeObsever);
+    
+}
+
+
+- (void) testRunloop{
+    NSThread *thread = [[NSThread alloc] initWithBlock:^{
+        NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(runCallback) userInfo:nil repeats:YES];
+        //        、、 // NSEventTrackingRunLoopMode
+        //UITrackingRunLoopMode NSRunLoopCommonModes NSDefaultRunLoopMode
+        
+        
+        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+        //        [[NSRunLoop currentRunLoop] run]; //常驻线程 线程一直运行
+        
+        [NSRunLoop currentRunLoop];
+        
+        while (!_finish) {
+            [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.000001]];
+        }
+        NSLog(@"GOGOGO");
+        
+    }];
+    
+    [thread start];
+}
+
+#pragma mark - Runloop
+- (void)addRunloopObserverTest{
+    //将timer添加到runloop中 并开启runloop
+    [NSTimer scheduledTimerWithTimeInterval:0.0001 target:self selector:@selector(runCallback) userInfo:nil repeats:YES];
+    CFRunLoopRef loop =   CFRunLoopGetCurrent();
+    static CFRunLoopObserverRef observer;
+    CFRunLoopObserverContext context = {
+        0,
+        (__bridge void *)(self),
+        &CFRetain,
+        &CFRelease,
+        NULL
+    };
+    
+    observer =  CFRunLoopObserverCreate(NULL,kCFRunLoopBeforeWaiting , YES, 0, &callBack, &context);
+    CFRunLoopAddObserver(loop, observer, kCFRunLoopDefaultMode);//kCFRunLoopCommonModes
+}
+
+
+static void callBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info){
+    NSLog(@"---来了");
+}
+
+
+//线程间通信也是一个事件，交给runloop处理
+- (void)testThread{
+    NSThread *T = [[NSThread alloc] initWithBlock:^{
+        NSLog(@"----%@",[NSThread currentThread]);
+        while (true) {
+            [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.0001]];
+        }
+        
+    }];
+    [T start];
+    [self performSelector:@selector(runCallback) onThread:T withObject:nil waitUntilDone:NO];
+}
+
+
+
+
+- (void)runCallback{
+    //    if (_finish) {
+    //        [NSThread exit]; 退出当前线程
+    //    }
+    
+    NSLog(@"------%@",[NSThread currentThread]);
+}
+
+
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "BYUIAnimationViewController.h"
+#import <Library/Library.h>
 
 @interface BYUIAnimationViewController ()
 @property (weak, nonatomic) IBOutlet UIView *yellowView;
@@ -42,6 +43,11 @@ CGAffineTransform CGAffineTransformMakeDemo(CGFloat x,CGFloat y){
 
 - (void)viewDidLoad{
     self.title = @"UIView动画";
+    BinyuButton *buttion = [[BinyuButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+     buttion.backgroundColor = [UIColor grayColor];
+                            
+   [self.view addSubview:buttion];
+    
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
