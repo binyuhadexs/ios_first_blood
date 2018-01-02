@@ -7,6 +7,7 @@
 //
 
 #import "BYRACTestViewController.h"
+#import "ReactiveObjC.h"
 
 /*
  http://blog.leichunfeng.com/blog/2015/11/08/functor-applicative-and-monad/
@@ -33,10 +34,52 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+//    [self demo1];
+//     [self demo2];
+//    [self demo3];
+//    [self demo4];
+    NSLog(@"%s",metamacro_stringify(101));
 }
 
+- (void)demo4{
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIApplicationDidEnterBackgroundNotification object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+        NSLog(@"==%@",x);
+    }];
+}
 
+- (void)demo3{
+    [[self.submit rac_signalForControlEvents: UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+         NSLog(@"==%@",x);
+    }];
+}
 
+- (void)demo2{
+    @weakify(self)
+    [[self.textField rac_textSignal] subscribeNext:^(NSString * _Nullable x) {
+        NSLog(@"%@",x);
+        @strongify(self);
+        self.textField.text = @"Hello";
+    }];
+}
+
+- (void)demo1{
+    RACSignal *racsignal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        NSLog(@"XXXXXXXXXX");
+        [subscriber sendNext:@"xxxx"];
+        return nil;
+    }];
+    
+    [racsignal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"XXXXXXXXXX==%@",x);
+    }];
+    
+    
+    [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        return nil;
+    }] subscribeNext:^(id  _Nullable x) {
+        
+    }];
+}
 
 
 @end

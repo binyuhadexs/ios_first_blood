@@ -13,10 +13,11 @@ pod 'ReactiveObjC', '~> 3.0.0'
 pod 'WeexSDK'
 pod 'SocketRocket'
 
-pod 'SDWebImage'
+#pod 'SDWebImage'
 
 #检测内存泄露
 pod 'MLeaksFinder'
+pod 'CocoaLumberjack'
 
 target 'iOSTrain' do
     
