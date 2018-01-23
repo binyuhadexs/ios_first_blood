@@ -38,8 +38,6 @@
 //    [self.view addConstraint:constraitL];
 //    [self.view addConstraint:constraitT];
     
-    
-
 }
 
 - (void)didReceiveMemoryWarning {

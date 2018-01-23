@@ -1,0 +1,25 @@
+{
+  "name": "ManageLocalCode",
+  "version": "0.0.1",
+  "summary": "A short description of ManageLocalCode.",
+  "description": "ManageLocalCode.",
+  "homepage": "http://EXAMPLE/ManageLocalCode",
+  "license": "MIT",
+  "authors": {
+    "binyu.xia": "binyu.xia@hiwifi.tw"
+  },
+  "source": {
+    "git": "",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "ManageLocalCode/Classes",
+    "ManageLocalCode/Classes/**/*.{h,m}"
+  ],
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}

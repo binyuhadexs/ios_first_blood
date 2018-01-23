@@ -146,6 +146,10 @@ NSURLConnection - 从 iOS 2.0 开始
 //    mutalbeRquest.HTTPMethod = @"";
 //    mutalbeRquest.
     
+//    mutalbeRquest
+    
+//    [NSURLSession sharedSession].
+    
    NSURLSessionDataTask *task =  [[NSURLSession sharedSession] dataTaskWithRequest:mutalbeRquest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSLog(@"Error=%@",error);
         NSLog(@"currentThread=%@",[NSThread currentThread]);

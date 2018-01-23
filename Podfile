@@ -19,6 +19,8 @@ pod 'SocketRocket'
 pod 'MLeaksFinder'
 pod 'CocoaLumberjack'
 
+pod 'ManageLocalCode', :path => '/hadexs_demo_work_spase/iOSTrain/ManageLocalCode'
+
 target 'iOSTrain' do
     
 end

@@ -231,6 +231,13 @@
 		5C8D37461FE0181A0090C699 /* AbstarctProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D37451FE0181A0090C699 /* AbstarctProxy.m */; };
 		5C8D37491FE0273B0090C699 /* ContentProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D37481FE0273B0090C699 /* ContentProxy.m */; };
 		5C8D374E1FE0295E0090C699 /* AbstarctSpamMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D374D1FE0295E0090C699 /* AbstarctSpamMessages.m */; };
+		5C953BC31FFF4EB80012E031 /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C953BC21FFF4EB80012E031 /* NetworkTools.m */; };
+		5C953BC71FFF5E9A0012E031 /* BYRACTest2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C953BC51FFF5E9A0012E031 /* BYRACTest2ViewController.m */; };
+		5C953BC81FFF5E9A0012E031 /* BYRACTest2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C953BC61FFF5E9A0012E031 /* BYRACTest2ViewController.xib */; };
+		5C953BCC1FFF62140012E031 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C953BCB1FFF62140012E031 /* LoginViewModel.m */; };
+		5C953BD21FFF71650012E031 /* BYRACTestActionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C953BD11FFF71650012E031 /* BYRACTestActionListViewController.m */; };
+		5C953BD41FFF71B10012E031 /* RACList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C953BD31FFF71B10012E031 /* RACList.plist */; };
+		5C953BD71FFF730E0012E031 /* BYRACTestOperator1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C953BD61FFF730E0012E031 /* BYRACTestOperator1ViewController.m */; };
 		5CB313FC1FBFE7930080BBFA /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB313FA1FBFE7930080BBFA /* NSArray+Log.m */; };
 		5CB314001FC069AC0080BBFA /* BYSessionTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB313FE1FC069AC0080BBFA /* BYSessionTestViewController.m */; };
 		5CB314011FC069AC0080BBFA /* BYSessionTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB313FF1FC069AC0080BBFA /* BYSessionTestViewController.xib */; };
@@ -364,18 +371,18 @@
 			remoteGlobalIDString = 5CCD9CA61F4B01D4009D7540;
 			remoteInfo = iOSTrain;
 		};
+		5CD779131FFB7BAC0029458F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFFC05D1FE3F6FA00EEBA64 /* Library.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CFFC03E1FE3F15B00EEBA64;
+			remoteInfo = Library;
+		};
 		5CFFC0611FE3F6FA00EEBA64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5CFFC05D1FE3F6FA00EEBA64 /* Library.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5CFFC03F1FE3F15B00EEBA64;
-			remoteInfo = Library;
-		};
-		5CFFC0631FE3F76B00EEBA64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5CFFC05D1FE3F6FA00EEBA64 /* Library.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5CFFC03E1FE3F15B00EEBA64;
 			remoteInfo = Library;
 		};
 /* End PBXContainerItemProxy section */
@@ -645,10 +652,6 @@
 		5C3D2C9D1FD26D8F00617345 /* BYMVCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYMVCModel.m; sourceTree = "<group>"; };
 		5C3D2C9F1FD27BA500617345 /* BYMVCView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYMVCView.h; sourceTree = "<group>"; };
 		5C3D2CA01FD27BA500617345 /* BYMVCView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYMVCView.m; sourceTree = "<group>"; };
-		5C57838C1FEA5BF900A475EC /* abs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = abs.h; sourceTree = "<group>"; };
-		5C57838D1FEA5BF900A475EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C5783991FEA5BFA00A475EC /* absTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = absTests.m; sourceTree = "<group>"; };
-		5C57839B1FEA5BFA00A475EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C5789171FBC8FBC00314D23 /* BYNSOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYNSOperation.h; sourceTree = "<group>"; };
 		5C5789181FBC8FBC00314D23 /* BYNSOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYNSOperation.m; sourceTree = "<group>"; };
 		5C57891A1FBC94E800314D23 /* BYCurrentOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYCurrentOperation.h; sourceTree = "<group>"; };
@@ -806,6 +809,18 @@
 		5C8D374B1FE027BE0090C699 /* MessagesProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagesProtocol.h; sourceTree = "<group>"; };
 		5C8D374C1FE0295E0090C699 /* AbstarctSpamMessages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstarctSpamMessages.h; sourceTree = "<group>"; };
 		5C8D374D1FE0295E0090C699 /* AbstarctSpamMessages.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstarctSpamMessages.m; sourceTree = "<group>"; };
+		5C953BC11FFF4EB80012E031 /* NetworkTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkTools.h; sourceTree = "<group>"; };
+		5C953BC21FFF4EB80012E031 /* NetworkTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkTools.m; sourceTree = "<group>"; };
+		5C953BC41FFF5E9A0012E031 /* BYRACTest2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYRACTest2ViewController.h; sourceTree = "<group>"; };
+		5C953BC51FFF5E9A0012E031 /* BYRACTest2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYRACTest2ViewController.m; sourceTree = "<group>"; };
+		5C953BC61FFF5E9A0012E031 /* BYRACTest2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BYRACTest2ViewController.xib; sourceTree = "<group>"; };
+		5C953BCA1FFF62140012E031 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		5C953BCB1FFF62140012E031 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		5C953BD01FFF71650012E031 /* BYRACTestActionListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYRACTestActionListViewController.h; sourceTree = "<group>"; };
+		5C953BD11FFF71650012E031 /* BYRACTestActionListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYRACTestActionListViewController.m; sourceTree = "<group>"; };
+		5C953BD31FFF71B10012E031 /* RACList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RACList.plist; sourceTree = "<group>"; };
+		5C953BD51FFF730E0012E031 /* BYRACTestOperator1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYRACTestOperator1ViewController.h; sourceTree = "<group>"; };
+		5C953BD61FFF730E0012E031 /* BYRACTestOperator1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYRACTestOperator1ViewController.m; sourceTree = "<group>"; };
 		5CB313FA1FBFE7930080BBFA /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		5CB313FB1FBFE7930080BBFA /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		5CB313FD1FC069AC0080BBFA /* BYSessionTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYSessionTestViewController.h; sourceTree = "<group>"; };
@@ -1748,24 +1763,6 @@
 			path = MVC;
 			sourceTree = "<group>";
 		};
-		5C57838B1FEA5BF900A475EC /* abs */ = {
-			isa = PBXGroup;
-			children = (
-				5C57838C1FEA5BF900A475EC /* abs.h */,
-				5C57838D1FEA5BF900A475EC /* Info.plist */,
-			);
-			path = abs;
-			sourceTree = "<group>";
-		};
-		5C5783981FEA5BFA00A475EC /* absTests */ = {
-			isa = PBXGroup;
-			children = (
-				5C5783991FEA5BFA00A475EC /* absTests.m */,
-				5C57839B1FEA5BFA00A475EC /* Info.plist */,
-			);
-			path = absTests;
-			sourceTree = "<group>";
-		};
 		5C5789201FBDDA5600314D23 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -2121,6 +2118,39 @@
 			path = Group;
 			sourceTree = "<group>";
 		};
+		5C953BC91FFF61A50012E031 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				5C953BC41FFF5E9A0012E031 /* BYRACTest2ViewController.h */,
+				5C953BC51FFF5E9A0012E031 /* BYRACTest2ViewController.m */,
+				5C953BC61FFF5E9A0012E031 /* BYRACTest2ViewController.xib */,
+				5C953BCA1FFF62140012E031 /* LoginViewModel.h */,
+				5C953BCB1FFF62140012E031 /* LoginViewModel.m */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		5C953BCE1FFF709B0012E031 /* Operator */ = {
+			isa = PBXGroup;
+			children = (
+				5C953BD51FFF730E0012E031 /* BYRACTestOperator1ViewController.h */,
+				5C953BD61FFF730E0012E031 /* BYRACTestOperator1ViewController.m */,
+			);
+			path = Operator;
+			sourceTree = "<group>";
+		};
+		5C953BCF1FFF70C60012E031 /* TZ */ = {
+			isa = PBXGroup;
+			children = (
+				5CB3141F1FC07F9C0080BBFA /* BYRACTestViewController.h */,
+				5CB314201FC07F9C0080BBFA /* BYRACTestViewController.m */,
+				5CB314211FC07F9C0080BBFA /* BYRACTestViewController.xib */,
+				5C953BC11FFF4EB80012E031 /* NetworkTools.h */,
+				5C953BC21FFF4EB80012E031 /* NetworkTools.m */,
+			);
+			path = TZ;
+			sourceTree = "<group>";
+		};
 		5CB313F91FBFE7550080BBFA /* category */ = {
 			isa = PBXGroup;
 			children = (
@@ -2173,9 +2203,12 @@
 		5CB3141E1FC07F7C0080BBFA /* RAC */ = {
 			isa = PBXGroup;
 			children = (
-				5CB3141F1FC07F9C0080BBFA /* BYRACTestViewController.h */,
-				5CB314201FC07F9C0080BBFA /* BYRACTestViewController.m */,
-				5CB314211FC07F9C0080BBFA /* BYRACTestViewController.xib */,
+				5C953BCF1FFF70C60012E031 /* TZ */,
+				5C953BCE1FFF709B0012E031 /* Operator */,
+				5C953BC91FFF61A50012E031 /* MVVM */,
+				5C953BD01FFF71650012E031 /* BYRACTestActionListViewController.h */,
+				5C953BD11FFF71650012E031 /* BYRACTestActionListViewController.m */,
+				5C953BD31FFF71B10012E031 /* RACList.plist */,
 			);
 			path = RAC;
 			sourceTree = "<group>";
@@ -2495,8 +2528,6 @@
 				5CCD9CA91F4B01D4009D7540 /* iOSTrain */,
 				5CCD9CC61F4B01D4009D7540 /* iOSTrainTests */,
 				5CCD9CD11F4B01D4009D7540 /* iOSTrainUITests */,
-				5C57838B1FEA5BF900A475EC /* abs */,
-				5C5783981FEA5BFA00A475EC /* absTests */,
 				5CCD9CA81F4B01D4009D7540 /* Products */,
 				09DDB8637D8FB5DCDF71DAFF /* Pods */,
 				98549473FC506A920F562497 /* Frameworks */,
@@ -2788,7 +2819,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				5CFFC0641FE3F76B00EEBA64 /* PBXTargetDependency */,
+				5CD779141FFB7BAC0029458F /* PBXTargetDependency */,
 			);
 			name = iOSTrain;
 			productName = iOSTrain;
@@ -2934,6 +2965,7 @@
 				5C0D8BC91F52C98900F7864A /* AnimationTest.plist in Resources */,
 				5C7A2E821FC526BD0047E563 /* BYXibTestView.xib in Resources */,
 				5CBD93B61FC6CF2D00D83382 /* BYKVCTestViewController.xib in Resources */,
+				5C953BC81FFF5E9A0012E031 /* BYRACTest2ViewController.xib in Resources */,
 				5CB314681FC3D6580080BBFA /* BYArchiverTestViewController.xib in Resources */,
 				5C5789371FBDDF3200314D23 /* sdwebimage.plist in Resources */,
 				5CBD93A01FC6B73500D83382 /* BYCALayerTest1ViewController.xib in Resources */,
@@ -2954,6 +2986,7 @@
 				5CB314511FC2AAFA0080BBFA /* BYUIViewAnimationTestViewController.xib in Resources */,
 				5C57897A1FBDE65200314D23 /* BYSDWebImageTestViewController.xib in Resources */,
 				5C57892E1FBDDB8900314D23 /* network.plist in Resources */,
+				5C953BD41FFF71B10012E031 /* RACList.plist in Resources */,
 				5CB3145F1FC31E7E0080BBFA /* BYBlockTestViewController.xib in Resources */,
 				5C6C82E01FB5FF9D00FA8171 /* BYAutolayout6ViewController.xib in Resources */,
 				5C3824901FD5AC3B003D323F /* spaceship.png in Resources */,
@@ -3068,6 +3101,7 @@
 				5CD4532A1FF239DF000C22C4 /* StudentModel.m in Sources */,
 				5C6C82D41FB5CA9000FA8171 /* NSArray+MASAdditions.m in Sources */,
 				5C3824A61FD79709003D323F /* BYShape.m in Sources */,
+				5C953BC31FFF4EB80012E031 /* NetworkTools.m in Sources */,
 				5C30EB991FCF023900C8913A /* BYStrategyA.m in Sources */,
 				5C6C827E1FB570CB00FA8171 /* BYAutolayout4ViewController.m in Sources */,
 				5CB3140D1FC079670080BBFA /* HKDownloaderManager.m in Sources */,
@@ -3105,6 +3139,7 @@
 				5C3824C51FD7C075003D323F /* VOLVOCarFactory.m in Sources */,
 				5C28AA9E1FE6C32100CC0F5F /* TreeNode.m in Sources */,
 				5CCD9D001F4B0B51009D7540 /* BYUINavigationController.m in Sources */,
+				5C953BD71FFF730E0012E031 /* BYRACTestOperator1ViewController.m in Sources */,
 				5C5789231FBDDA7700314D23 /* Reachability.m in Sources */,
 				5C0008D41FB9E97300E8AB69 /* BYGCDTest1ViewController.m in Sources */,
 				5C3824691FD44E2B003D323F /* FBKVOController.m in Sources */,
@@ -3175,6 +3210,7 @@
 				5C7A2E7A1FC5151C0047E563 /* BYDrawView.m in Sources */,
 				5CC3F39F1FC6A0D500AAE832 /* BYQuartsCoreTest3ViewController.m in Sources */,
 				5C3824BF1FD7BFE2003D323F /* CarFactory.m in Sources */,
+				5C953BCC1FFF62140012E031 /* LoginViewModel.m in Sources */,
 				5C38248D1FD57DA6003D323F /* WXEventModule.m in Sources */,
 				5CC965D01FA43E9000F91B10 /* BYObjectiveCQuestionViewController.m in Sources */,
 				5C5789D21FBEDC7500314D23 /* SimplePing.m in Sources */,
@@ -3276,6 +3312,7 @@
 				5CD452FE1FF0EF28000C22C4 /* Invoker.m in Sources */,
 				5CBD93A51FC6BD9F00D83382 /* ClockView.m in Sources */,
 				5CD453141FF201C1000C22C4 /* BlindMonk.m in Sources */,
+				5C953BD21FFF71650012E031 /* BYRACTestActionListViewController.m in Sources */,
 				5C6C82E41FB6941F00FA8171 /* BYViewTest1ViewController.m in Sources */,
 				5C3824461FD3E297003D323F /* BYMVVMDemoViewController.m in Sources */,
 				5CB3140C1FC079670080BBFA /* HKDownloader.m in Sources */,
@@ -3287,6 +3324,7 @@
 				5CD453201FF23509000C22C4 /* BYPrototypeDemoViewController.m in Sources */,
 				5CD453451FF25C07000C22C4 /* CVModel.m in Sources */,
 				5C28AAD81FE90E2F00CC0F5F /* File.m in Sources */,
+				5C953BC71FFF5E9A0012E031 /* BYRACTest2ViewController.m in Sources */,
 				5C0008CF1FB9BD3700E8AB69 /* BYGCDTestViewController.m in Sources */,
 				5C0D8BC61F52C92E00F7864A /* BYAnimationTestViewController.m in Sources */,
 				5C3824D61FD7C710003D323F /* BYDEngine.m in Sources */,
@@ -3339,10 +3377,10 @@
 			target = 5CCD9CA61F4B01D4009D7540 /* iOSTrain */;
 			targetProxy = 5CCD9CCF1F4B01D4009D7540 /* PBXContainerItemProxy */;
 		};
-		5CFFC0641FE3F76B00EEBA64 /* PBXTargetDependency */ = {
+		5CD779141FFB7BAC0029458F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Library;
-			targetProxy = 5CFFC0631FE3F76B00EEBA64 /* PBXContainerItemProxy */;
+			targetProxy = 5CD779131FFB7BAC0029458F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

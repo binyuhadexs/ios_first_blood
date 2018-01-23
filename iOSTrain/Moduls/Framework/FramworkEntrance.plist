@@ -11,7 +11,7 @@
             </dict>
             <dict>
                 <key>controller</key>
-                <string>BYRACTestViewController</string>
+                <string>BYRACTestActionListViewController</string>
                 <key>name</key>
                 <string>ReactiveCocoa</string>
             </dict>

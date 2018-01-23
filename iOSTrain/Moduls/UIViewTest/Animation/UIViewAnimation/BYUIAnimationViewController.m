@@ -8,6 +8,10 @@
 
 #import "BYUIAnimationViewController.h"
 #import <Library/Library.h>
+#import <Library/BinyuButton.h>
+//#import "<#header#>"
+#import "NSString+Dir.h"
+#import "UIView+Extension.h"
 
 @interface BYUIAnimationViewController ()
 @property (weak, nonatomic) IBOutlet UIView *yellowView;
@@ -47,6 +51,12 @@ CGAffineTransform CGAffineTransformMakeDemo(CGFloat x,CGFloat y){
      buttion.backgroundColor = [UIColor grayColor];
                             
    [self.view addSubview:buttion];
+    [buttion setCornerRadius:5.0];
+//   NSLog(@"appendDocumentDir=%@",[@"abc" appendDocumentDir]);
+    
+    
+    
+//    [NSString app];
     
 }
 
